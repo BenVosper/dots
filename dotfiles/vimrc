@@ -1,0 +1,6 @@
+syntax on
+
+vnoremap <C-c> "+y
+map <C-v> "+P
+map <C-e> :wq<CR>
+imap <C-e> <Esc>:wq<CR>

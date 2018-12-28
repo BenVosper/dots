@@ -1,6 +1,47 @@
 config:
   backup: true
+  banner: true
   create: true
   dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_by_default: false
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop
 dotfiles:
+  f_bash_profile:
+    dst: ~/.bash_profile
+    src: bash_profile
+  f_bashrc:
+    dst: ~/.bashrc
+    src: bashrc
+  f_config:
+    dst: ~/.config/i3/config
+    src: config/i3/config
+  f_i3status_config:
+    dst: ~/.config/i3status/config
+    src: config/i3status/config
+  f_vimrc:
+    dst: ~/.vimrc
+    src: vimrc
+  f_xbindkeysrc:
+    dst: ~/.xbindkeysrc
+    src: xbindkeysrc
+  f_xinitrc:
+    dst: ~/.xinitrc
+    src: xinitrc
+  f_xresources:
+    dst: ~/.Xresources
+    src: Xresources
 profiles:
+  archsd:
+    dotfiles:
+    - f_bashrc
+    - f_bash_profile
+    - f_vimrc
+    - f_xbindkeysrc
+    - f_xinitrc
+    - f_xresources
+    - f_config
+    - f_i3status_config

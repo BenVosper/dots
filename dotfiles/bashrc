@@ -1,0 +1,36 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+
+source /usr/share/git/completion/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+
+BOLD="\[$(tput bold)\]"
+THEMECOL1="\[$(tput setaf 1)\]"
+THEMECOL2="\[$(tput setaf 2)\]"
+THEMECOL3="\[$(tput setaf 3)\]"
+GREY="\[$(tput setaf 238)\]"
+RESET="\[$(tput sgr0)\]"
+GIT='$(__git_ps1 " (%s)")'
+
+PS1="${BOLD}${THEMECOL1}\u ${THEMECOL2}\W${THEMECOL3}${GIT}\n${GREY}Ω ${RESET}"
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
+
+# Set cursor to steady bar
+echo -e "\033[6 q"
+
+# Dotdrop alias
+alias dotdrop=~/Code/dots/dotdrop.sh --cfg=~/Code/dots/config.yaml
