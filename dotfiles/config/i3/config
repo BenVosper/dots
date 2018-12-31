@@ -196,6 +196,7 @@ bar {
 }
 
 bindsym $mod+Shift+w exec wal -i ~/Images
+bindsym $mod+Shift+m exec ~/.config/i3/i3lock-fancy-multimonitor/lock 
 
 new_window 1pixel
 exec "xbindkeys"
