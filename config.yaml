@@ -22,6 +22,9 @@ dotfiles:
   f_i3status_config:
     dst: ~/.config/i3status/config
     src: config/i3status/config
+  f_local.conf:
+    dst: /etc/fonts/local.conf
+    src: etc/fonts/local.conf
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
@@ -45,3 +48,4 @@ profiles:
     - f_xresources
     - f_config
     - f_i3status_config
+    - f_local.conf
