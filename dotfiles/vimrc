@@ -4,3 +4,8 @@ vnoremap <C-c> "+y
 map <C-v> "+P
 map <C-e> :wq<CR>
 imap <C-e> <Esc>:wq<CR>
+
+let &t_SI .= "\<Esc>[6 q"
+let &t_EI .= "\<Esc>[2 q"
+
+autocmd VimLeave * silent !echo -ne "\e[6 q"
