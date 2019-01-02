@@ -1,14 +1,17 @@
 syntax on
 
+" Copy and paste
 vnoremap <C-c> "+y
 map <C-v> "+P
-map <C-e> :wq<CR>
+
+" Quick save and exit
+map <C-e> :wq<CR> 
 imap <C-e> <Esc>:wq<CR>
 
 " Save files as sudo without doing 'sudo vim'
 cmap w!! w !sudo tee > /dev/null %
 
+" Set cursor styles
 let &t_SI .= "\<Esc>[6 q"
 let &t_EI .= "\<Esc>[2 q"
-
 autocmd VimLeave * silent !echo -ne "\e[6 q"
