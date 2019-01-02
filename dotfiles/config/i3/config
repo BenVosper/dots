@@ -48,7 +48,7 @@ client.background       $bg
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec --no-startup-id urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -195,10 +195,10 @@ bar {
 	}
 }
 
-bindsym $mod+Shift+w exec wal -i ~/Images
-bindsym $mod+Shift+m exec ~/.config/i3/i3lock-fancy-multimonitor/lock 
+bindsym $mod+Shift+w exec --no-startup-id wal -i ~/Images
+bindsym $mod+Shift+m exec --no-startup-id ~/.config/i3/i3lock-fancy-multimonitor/lock 
 
 new_window 1pixel
-exec "xbindkeys"
-exec "setxkbmap -layout gb"
+exec --no-startup-id "xbindkeys"
+exec --no-startup-id "setxkbmap -layout gb"
 
