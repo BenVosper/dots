@@ -34,6 +34,9 @@ dotfiles:
   f_xinitrc:
     dst: ~/.xinitrc
     src: xinitrc
+  f_xrandr-extend.cfg:
+    dst: ~/.config/xrandr-extend.cfg
+    src: config/xrandr-extend.cfg
   f_xresources:
     dst: ~/.Xresources
     src: Xresources
@@ -49,3 +52,4 @@ profiles:
     - f_config
     - f_i3status_config
     - f_local.conf
+    - f_xrandr-extend.cfg
