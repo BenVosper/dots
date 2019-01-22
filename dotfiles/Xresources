@@ -1,4 +1,4 @@
-Xft.dpi: 140
+Xft.dpi: 150
 
 URxvt.font: xft:Noto Sans Mono:size=12:antialias=true:hinting=true
 URxvt.scrollBar: false
