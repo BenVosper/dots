@@ -10,6 +10,9 @@ config:
   showdiff: false
   workdir: ~/.config/dotdrop
 dotfiles:
+  d_applications:
+    dst: ~/.local/share/applications
+    src: local/share/applications
   f_bash_profile:
     dst: ~/.bash_profile
     src: bash_profile
@@ -53,3 +56,4 @@ profiles:
     - f_i3status_config
     - f_local.conf
     - f_xrandr-extend.cfg
+    - d_applications
