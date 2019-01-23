@@ -13,6 +13,9 @@ dotfiles:
   d_applications:
     dst: ~/.local/share/applications
     src: local/share/applications
+  d_git-templates:
+    dst: ~/.git-templates
+    src: git-templates
   f_bash_profile:
     dst: ~/.bash_profile
     src: bash_profile
@@ -22,6 +25,9 @@ dotfiles:
   f_config:
     dst: ~/.config/i3/config
     src: config/i3/config
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: gitconfig
   f_i3status_config:
     dst: ~/.config/i3status/config
     src: config/i3status/config
@@ -61,3 +67,5 @@ profiles:
     - f_xrandr-extend.cfg
     - d_applications
     - f_new-workspace
+    - d_git-templates
+    - f_gitconfig
