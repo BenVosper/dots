@@ -39,4 +39,4 @@ alias dotdrop=~/Code/dots/dotdrop.sh --cfg=~/Code/dots/config.yaml
 
 # Monitor aliases
 alias cm='xrandr-extend secondary'
-alias dcm='xrandr --output DP-1 --off'
+alias dcm='xrandr --output DP-1 --off --output HDMI-1 --off'
