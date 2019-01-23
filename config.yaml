@@ -28,6 +28,9 @@ dotfiles:
   f_local.conf:
     dst: /etc/fonts/local.conf
     src: etc/fonts/local.conf
+  f_new-workspace:
+    dst: ~/.config/i3/new-workspace
+    src: config/i3/new-workspace
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
@@ -57,3 +60,4 @@ profiles:
     - f_local.conf
     - f_xrandr-extend.cfg
     - d_applications
+    - f_new-workspace

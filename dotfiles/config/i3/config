@@ -156,6 +156,9 @@ bindsym $mod+Shift+less move workspace to output left
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
+# New workspace with lowest available number
+bindsym $mod+grave exec --no-startup-id . ~/.config/i3/new-workspace
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
