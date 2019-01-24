@@ -35,5 +35,8 @@ fi
 # Pick a random wallpaper and colourscheme
 wal -i ~/Images
 
+# Start ssh-agent
+eval $(ssh-agent)
+
 xrdb -merge ~/.Xresources
 exec i3
