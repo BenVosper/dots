@@ -38,5 +38,5 @@ echo -e "\033[6 q"
 alias dotdrop=~/Code/dots/dotdrop.sh --cfg=~/Code/dots/config.yaml
 
 # Monitor aliases
-alias cm='xrandr-extend secondary'
-alias dcm='xrandr --output DP1 --off --output HDMI1 --off'
+alias cm='xrandr-extend secondary && wal -R'
+alias dcm='xrandr --output DP1 --off --output HDMI1 --off && wal -R'
