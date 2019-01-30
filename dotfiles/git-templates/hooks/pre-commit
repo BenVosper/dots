@@ -1,7 +1,7 @@
 #!/bin/sh
 
 FILENAMES=$(git diff --cached --name-only --diff-filter=MA| grep \\.py$)
-if [ ! -z $FILENAMES ]
+if [[ ! -z $FILENAMES ]]
 then
   python -m flake8 $FILENAMES
 fi
