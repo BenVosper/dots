@@ -7,6 +7,7 @@ bash-completion
 binutils
 bison
 bzip2
+colordiff
 coreutils
 cryptsetup
 device-mapper
@@ -30,11 +31,13 @@ gawk
 gcc
 gcc-libs
 gettext
+gimp
 git
 glibc
 grep
 groff
 grub
+gscreenshot
 gvim
 gzip
 i3-gaps
@@ -58,6 +61,7 @@ man-db
 man-pages
 mdadm
 mesa
+mesa-demos
 nano
 netctl
 networkmanager
@@ -96,6 +100,7 @@ texinfo
 ttf-fira-code
 ttf-inconsolata
 ttf-linux-libertine
+unzip
 usbutils
 util-linux
 vi
@@ -103,9 +108,12 @@ wavebox-bin
 which
 xbindkeys
 xf86-input-synaptics
+xf86-video-intel
+xf86-video-vesa
 xfsprogs
 xorg-server
 xorg-xinit
+xorg-xinput
 xorg-xprop
 xorg-xrandr
 yay
