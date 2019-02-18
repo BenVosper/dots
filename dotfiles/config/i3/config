@@ -212,6 +212,9 @@ bindsym $mod+Shift+m exec --no-startup-id ~/.config/i3/i3lock-fancy-multimonitor
 # Start 'xautolock'. Lock screen after 5 minutes unless mouse is within 50px of any corner
 exec_always --no-startup-id xautolock -time 5 -corners "----" -cornersize 50 -locker "~/.config/i3/i3lock-fancy-multimonitor/lock"
 
+# Reset touchscreen output
+exec_always --no-startup-id xinput --map-to-output 'ELAN Touchscreen' eDP1
+
 new_window 1pixel
 exec --no-startup-id "xbindkeys"
 exec --no-startup-id "setxkbmap -layout gb"
