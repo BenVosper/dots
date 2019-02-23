@@ -40,6 +40,9 @@ dotfiles:
   f_new-workspace:
     dst: ~/.config/i3/new-workspace
     src: config/i3/new-workspace
+  f_vconsole.conf:
+    dst: /etc/vconsole.conf
+    src: etc/vconsole.conf
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
@@ -73,3 +76,4 @@ profiles:
     - d_git-templates
     - f_gitconfig
     - f_70-synaptics.conf
+    - f_vconsole.conf
