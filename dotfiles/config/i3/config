@@ -219,4 +219,4 @@ new_window 1pixel
 exec --no-startup-id "xbindkeys"
 exec --no-startup-id "setxkbmap -layout gb"
 
-
+exec --no-startup-id compton & -b -d :0
