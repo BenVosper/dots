@@ -40,6 +40,9 @@ dotfiles:
   f_new-workspace:
     dst: ~/.config/i3/new-workspace
     src: config/i3/new-workspace
+  f_user-dirs.defaults:
+    dst: /etc/xdg/user-dirs.defaults
+    src: etc/xdg/user-dirs.defaults
   f_vconsole.conf:
     dst: /etc/vconsole.conf
     src: etc/vconsole.conf
@@ -77,3 +80,4 @@ profiles:
     - f_gitconfig
     - f_70-synaptics.conf
     - f_vconsole.conf
+    - f_user-dirs.defaults
