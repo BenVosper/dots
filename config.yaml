@@ -16,6 +16,9 @@ dotfiles:
   d_git-templates:
     dst: ~/.git-templates
     src: git-templates
+  f_70-synaptics.conf:
+    dst: /etc/X11/xorg.conf.d/70-synaptics.conf
+    src: etc/X11/xorg.conf.d/70-synaptics.conf
   f_bash_profile:
     dst: ~/.bash_profile
     src: bash_profile
@@ -69,3 +72,4 @@ profiles:
     - f_new-workspace
     - d_git-templates
     - f_gitconfig
+    - f_70-synaptics.conf
