@@ -206,7 +206,7 @@ bar {
 	}
 }
 
-bindsym $mod+Shift+w exec --no-startup-id wal -i ~/Images
+bindsym $mod+Shift+w exec --no-startup-id wal -i ~/images
 bindsym $mod+Shift+m exec --no-startup-id ~/.config/i3/i3lock-fancy-multimonitor/lock 
 
 # Start 'xautolock'. Lock screen after 5 minutes unless mouse is within 50px of any corner

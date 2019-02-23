@@ -53,7 +53,7 @@ dotfiles:
     dst: ~/.Xresources
     src: Xresources
 profiles:
-  archsd:
+  omega:
     dotfiles:
     - f_bashrc
     - f_bash_profile
