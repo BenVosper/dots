@@ -204,6 +204,7 @@ bar {
 		background #020202
   		focused_workspace $bg #333333 #ffffff	
 	}
+        tray_output eDP1
 }
 
 bindsym $mod+Shift+w exec --no-startup-id wal -i ~/images
