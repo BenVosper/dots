@@ -16,9 +16,6 @@ dotfiles:
   d_git-templates:
     dst: ~/.git-templates
     src: git-templates
-  d_i3lock-fancy-multimonitor:
-    dst: ~/.config/i3/i3lock-fancy-multimonitor
-    src: config/i3/i3lock-fancy-multimonitor
   f_70-synaptics.conf:
     dst: /etc/X11/xorg.conf.d/70-synaptics.conf
     src: etc/X11/xorg.conf.d/70-synaptics.conf
@@ -43,6 +40,9 @@ dotfiles:
   f_local.conf:
     dst: /etc/fonts/local.conf
     src: etc/fonts/local.conf
+  f_lock:
+    dst: ~/.config/i3/lock
+    src: config/i3/lock
   f_new-workspace:
     dst: ~/.config/i3/new-workspace
     src: config/i3/new-workspace
@@ -88,4 +88,4 @@ profiles:
     - f_vconsole.conf
     - f_user-dirs.defaults
     - f_compton.conf
-    - d_i3lock-fancy-multimonitor
+    - f_lock

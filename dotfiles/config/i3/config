@@ -207,10 +207,10 @@ bar {
 }
 
 bindsym $mod+Shift+w exec --no-startup-id wal -i ~/images
-bindsym $mod+Shift+m exec --no-startup-id ~/.config/i3/i3lock-fancy-multimonitor/lock 
+bindsym $mod+Shift+m exec --no-startup-id . ~/.config/i3/lock
 
 # Start 'xautolock'. Lock screen after 5 minutes unless mouse is within 50px of any corner
-exec_always --no-startup-id xautolock -time 5 -corners "----" -cornersize 50 -locker "~/.config/i3/i3lock-fancy-multimonitor/lock"
+exec_always --no-startup-id xautolock -time 5 -corners "----" -cornersize 50 -locker "~/.config/i3/lock"
 
 # Reset touchscreen output
 exec_always --no-startup-id xinput --map-to-output 'ELAN Touchscreen' eDP1
