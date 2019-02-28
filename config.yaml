@@ -19,6 +19,9 @@ dotfiles:
   f_70-synaptics.conf:
     dst: /etc/X11/xorg.conf.d/70-synaptics.conf
     src: etc/X11/xorg.conf.d/70-synaptics.conf
+  f_archey3.cfg:
+    dst: ~/.archey3.cfg
+    src: archey3.cfg
   f_bash_profile:
     dst: ~/.bash_profile
     src: bash_profile
@@ -89,3 +92,4 @@ profiles:
     - f_user-dirs.defaults
     - f_compton.conf
     - f_lock
+    - f_archey3.cfg
