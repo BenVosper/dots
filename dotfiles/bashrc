@@ -7,6 +7,7 @@
 
 alias ls='ls --color=auto'
 alias a='archey3'
+alias g='git'
 alias v='vim'
 alias r='ranger'
 
@@ -39,5 +40,8 @@ echo -e "\033[6 q"
 alias dotdrop=~/code/dots/dotdrop.sh --cfg=~/code/dots/config.yaml
 
 # Monitor aliases
-alias cm='xrandr-extend secondary && wal -R'
-alias dcm='xrandr --output DP1 --off --output HDMI1 --off && wal -R'
+alias cm='xrandr-extend secondary && wal -R && setxkbmap gb'
+alias dcm='xrandr --output DP1 --off --output HDMI1 --off && wal -R && setxkbmap gb'
+
+# xclip alias. Copy to primary selection and remove newlines
+alias xclip='xclip -selection c -r'
