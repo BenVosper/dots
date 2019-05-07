@@ -2,6 +2,8 @@
 # ~/.bash_profile
 #
 
+source ~/.secrets.sh
+
 export EDITOR="vim"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
