@@ -8,7 +8,11 @@
 
 general {
         colors = true
+	color_good = "#5daf29"
+	color_degraded = "#ce7513"
+	color_bad = "#a72407"
         interval = 5
+	output_format = "i3bar"
 }
 
 order += "volume master"
@@ -31,8 +35,8 @@ tztime local {
 }
 
 volume master {
-        format = "♪: %volume"
-        format_muted = "♪: muted (%volume)"
+        format = "🔉: %volume"
+        format_muted = "🔇: MUTED"
         device = "default"
         mixer = "Master"
         mixer_idx = 0

@@ -59,6 +59,9 @@ dotfiles:
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
+  f_wrapper.py:
+    dst: ~/.config/i3status/wrapper.py
+    src: config/i3status/wrapper.py
   f_xbindkeysrc:
     dst: ~/.xbindkeysrc
     src: xbindkeysrc
@@ -94,3 +97,4 @@ profiles:
     - f_compton.conf
     - f_lock
     - f_archey3.cfg
+    - f_wrapper.py
