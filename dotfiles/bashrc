@@ -42,6 +42,23 @@ alias dotdrop=~/code/dots/dotdrop.sh --cfg=~/code/dots/config.yaml
 # Monitor aliases
 alias cm='xrandr-extend secondary && wal -R && setxkbmap gb'
 alias dcm='xrandr --output DP1 --off --output HDMI1 --off && wal -R && setxkbmap gb'
+alias cms='xrandr --output eDP1 --auto --output HDMI1 --same-as eDP1 --scale-from 3840x2160'
 
 # xclip alias. Copy to primary selection and remove newlines
 alias xclip='xclip -selection c -r'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/benv/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/benv/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/benv/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/benv/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
