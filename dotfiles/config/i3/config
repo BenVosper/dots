@@ -48,7 +48,7 @@ client.background       $bg
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id urxvt -e /bin/bash
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -219,7 +219,7 @@ bindsym $mod+Shift+w exec --no-startup-id wal -i ~/images
 bindsym $mod+Shift+m exec --no-startup-id xautolock -locknow 
 
 # Start 'xautolock'. Lock screen after 5 minutes unless mouse is within 50px of any corner
-exec_always --no-startup-id xautolock -time 2 -corners "----" -cornersize 50 -locker "bash ~/.config/i3/lock"
+exec_always --no-startup-id xautolock -time 2 -corners "----" -cornersize 50 -locker "dash ~/.config/i3/lock"
 
 # Reset touchscreen output
 exec_always --no-startup-id xinput --map-to-output 'ELAN Touchscreen' eDP1

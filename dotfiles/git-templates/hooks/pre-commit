@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 FILENAMES=$(git diff --cached --name-only --diff-filter=MA| grep \\.py$)
 if [[ ! -z $FILENAMES ]]
