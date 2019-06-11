@@ -50,12 +50,6 @@ dotfiles:
   f_local.conf:
     dst: /etc/fonts/local.conf
     src: etc/fonts/local.conf
-  f_lock:
-    dst: ~/.config/i3/lock
-    src: config/i3/lock
-  f_new-workspace:
-    dst: ~/.config/i3/new-workspace
-    src: config/i3/new-workspace
   f_user-dirs.defaults:
     dst: /etc/xdg/user-dirs.defaults
     src: etc/xdg/user-dirs.defaults
@@ -94,14 +88,12 @@ profiles:
     - f_local.conf
     - f_xrandr-extend.cfg
     - d_applications
-    - f_new-workspace
     - d_git-templates
     - f_gitconfig
     - f_70-synaptics.conf
     - f_vconsole.conf
     - f_user-dirs.defaults
     - f_compton.conf
-    - f_lock
     - f_archey3.cfg
     - f_wrapper.py
     - d_sxhkd
