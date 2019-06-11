@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/xclip -selection c -r "$@"

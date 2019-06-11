@@ -15,3 +15,6 @@ cmap w!! w !sudo tee > /dev/null %
 let &t_SI .= "\<Esc>[6 q"
 let &t_EI .= "\<Esc>[2 q"
 autocmd VimLeave * silent !echo -ne "\e[6 q"
+
+autocmd BufWritePost */i3/config !i3-msg reload
+autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd

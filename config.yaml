@@ -17,6 +17,12 @@ dotfiles:
   d_git-templates:
     dst: ~/.git-templates
     src: git-templates
+  d_scripts:
+    dst: ~/scripts
+    src: scripts
+  d_sxhkd:
+    dst: ~/.config/sxhkd
+    src: config/sxhkd
   f_70-synaptics.conf:
     dst: /etc/X11/xorg.conf.d/70-synaptics.conf
     src: etc/X11/xorg.conf.d/70-synaptics.conf
@@ -98,3 +104,5 @@ profiles:
     - f_lock
     - f_archey3.cfg
     - f_wrapper.py
+    - d_sxhkd
+    - d_scripts

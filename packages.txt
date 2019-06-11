@@ -48,6 +48,7 @@ reiserfsprogs
 sl
 solaar-git
 spotify
+sxhkd
 sxlock-git
 terminus-font
 terraform
@@ -60,13 +61,14 @@ vi
 wavebox-bin
 which
 xautolock
-xbindkeys
 xdg-user-dirs
 xf86-input-synaptics
 xf86-video-intel
 xf86-video-vesa
+xgetres
 xorg-server
 xorg-xbacklight
+xorg-xev
 xorg-xinit
 xorg-xinput
 xorg-xlsfonts

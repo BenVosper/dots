@@ -1,0 +1,93 @@
+###################################### MISC BINDINGS ####################################
+
+alt + Return 
+    urxvt -e /bin/bash
+
+alt + d
+    dmenuwrapper
+
+alt + F1
+    xautolock -locknow
+
+alt + F12
+    i3-nagbar -t warning -m 'Shutdown?' -B 'Yes, shutdown' 'shutdown now'
+
+alt + F11
+    i3-nagbar -t warning -m 'Reboot?' -B 'Yes, reboot' 'reboot'
+
+alt + grave
+    new-workspace
+
+alt + shift + w 
+    wal -i ~/images
+
+########################################## AUDIO ########################################
+
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1000
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioPlay
+    playerctl play-pause
+
+ctrl + alt + Tab
+    playerctl play-pause
+
+XF86AudioNext
+    playerctl next
+
+XF86AudioPrev
+    playerctl prev
+
+########################################### i3 ########################################## 
+
+alt + shift + q
+    i3-msg kill
+
+alt + shift + { Left, Down, Up, Right }
+    i3-msg move { left, down, up, right}
+
+alt + { Left, Down, Up, Right }
+    i3-msg focus { left, down, up, right}
+
+alt + { h, v }
+    i3-msg split { h, v }
+
+alt + f
+    i3-msg fullscreen toggle
+
+alt + shift + space
+    i3-msg floating toggle
+
+alt + { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }
+    i3-msg workspace { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+
+alt + shift + { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }
+    i3-msg move container to workspace { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+
+alt + shift + { greater, less }
+    i3-msg move workspace to output { right, left }
+
+alt + shift + c
+    i3-msg reload
+
+alt + shift + r
+    i3-msg restart
+
+alt + shift + e
+    i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'
+
+alt + shift + minus
+    i3-msg move scratchpad
+
+alt + minus
+    i3-msg scratchpad show
+
+alt + Tab
+    i3-msg workspace next
+
+alt + shift + Tab
+    i3-msg workspace prev
+
