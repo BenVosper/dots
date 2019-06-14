@@ -4,5 +4,4 @@ FOREGROUND=$(xgetres i3wm.color2 || echo "f4f4f4")
 NB="-nb '$BACKGROUND'"
 SB="-sb '$FOREGROUND'" 
 DMENU="dmenu -i -nf '#ffffff' -sf '#ffffff' $NB $SB"
-echo "$DMENU"
-j4-dmenu-desktop --dmenu="$DMENU"
+j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | $DMENU"
