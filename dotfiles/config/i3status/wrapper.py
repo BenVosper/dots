@@ -3,7 +3,7 @@
 import sys
 import json
 
-
+from cgi import escape
 from subprocess import run
 
 BLOCK_PADDING = 40  # px
@@ -20,12 +20,12 @@ def add_now_playing_block(blocks):
     if status != "Playing":
         return blocks
     process = run(
-        ["playerctl", "metadata", "--format", "{{ artist }} - <b><i>{{ title }}</i></b>"],
+        ["playerctl", "metadata", "--format", "{{ artist }}\n{{ title }}"],
         capture_output=True
     )
-    now_playing = process.stdout.decode().strip()
+    artist, title = escape(process.stdout.decode()).splitlines()
     now_playing_block = {
-        "full_text": f"🎵: {now_playing}" if now_playing else "",
+        "full_text": f"🎵: {artist} - <b><i>{title}</i></b>" if process.returncode == 0 else "",
         "name": "Now Playing",
         "markup": "pango"
     }
