@@ -16,5 +16,9 @@ let &t_SI .= "\<Esc>[6 q"
 let &t_EI .= "\<Esc>[2 q"
 autocmd VimLeave * silent !echo -ne "\e[6 q"
 
+" Allow mouse scrolling
+set mouse=a
+
 autocmd BufWritePost */i3/config !i3-msg reload
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+autocmd BufWritePost /home/benv/scripts/* !chmod +x /home/benv/scripts/*
