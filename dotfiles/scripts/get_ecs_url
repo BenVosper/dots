@@ -1,0 +1,2 @@
+#!/bin/sh
+python /home/benv/code/scripts/aws/get_ecs_url.py "$@"
