@@ -38,15 +38,9 @@ dotfiles:
   f_compton.conf:
     dst: ~/.config/compton.conf
     src: config/compton.conf
-  f_config:
-    dst: ~/.config/i3/config
-    src: config/i3/config
   f_gitconfig:
     dst: ~/.gitconfig
     src: gitconfig
-  f_i3status_config:
-    dst: ~/.config/i3status/config
-    src: config/i3status/config
   f_local.conf:
     dst: /etc/fonts/local.conf
     src: etc/fonts/local.conf
@@ -59,9 +53,6 @@ dotfiles:
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
-  f_wrapper.py:
-    dst: ~/.config/i3status/wrapper.py
-    src: config/i3status/wrapper.py
   f_xbindkeysrc:
     dst: ~/.xbindkeysrc
     src: xbindkeysrc
@@ -74,6 +65,12 @@ dotfiles:
   f_xresources:
     dst: ~/.Xresources
     src: Xresources
+  d_i3:
+    src: config/i3
+    dst: ~/.config/i3
+  d_i3status:
+    src: config/i3status
+    dst: ~/.config/i3status
 profiles:
   omega:
     dotfiles:
@@ -83,8 +80,6 @@ profiles:
     - f_xbindkeysrc
     - f_xinitrc
     - f_xresources
-    - f_config
-    - f_i3status_config
     - f_local.conf
     - f_xrandr-extend.cfg
     - d_applications
@@ -95,6 +90,7 @@ profiles:
     - f_user-dirs.defaults
     - f_compton.conf
     - f_archey3.cfg
-    - f_wrapper.py
     - d_sxhkd
     - d_scripts
+    - d_i3
+    - d_i3status

@@ -1,5 +1,0 @@
-#!/bin/sh
-xrandr --output DP1 --off --output HDMI1 --off && 
-wal -R && 
-setxkbmap gb && 
-xinput --map-to-output 'ELAN Touchscreen' eDP1

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-cd ~/code
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
-. scripts/git/bootstrap_repos.sh repos.txt 

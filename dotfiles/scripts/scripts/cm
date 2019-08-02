@@ -1,5 +1,0 @@
-#!/bin/sh
-xrandr-extend secondary && 
-wal -R && 
-setxkbmap gb && 
-xinput --map-to-output 'ELAN Touchscreen' eDP1
