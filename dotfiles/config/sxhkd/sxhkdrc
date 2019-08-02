@@ -9,6 +9,15 @@ alt + d
 alt + F1
     xautolock -locknow
 
+alt + { F2, F3 }
+    xbacklight -inc {-,+}10
+
+alt + F4
+    mountdevice
+
+alt + F5
+    umountdevice
+
 alt + F12
     i3-nagbar -t warning -m 'Shutdown?' -B 'Yes, shutdown' 'shutdown now'
 
