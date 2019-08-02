@@ -1,0 +1,4 @@
+#!/bin/bash
+BACKGROUND=$(xgetres i3wm.color1 || echo "#f0f0f0")
+FOREGROUND=$(xgetres i3wm.color2 || echo "f4f4f4")
+/usr/bin/dmenu -i -nf '#ffffff' -sf '#ffffff' -nb "$BACKGROUND" -sb "$FOREGROUND" "$@"
