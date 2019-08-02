@@ -71,6 +71,9 @@ dotfiles:
   d_i3status:
     src: config/i3status
     dst: ~/.config/i3status
+  d_ranger:
+    src: config/ranger
+    dst: ~/.config/ranger
 profiles:
   omega:
     dotfiles:
@@ -94,3 +97,4 @@ profiles:
     - d_scripts
     - d_i3
     - d_i3status
+    - d_ranger
