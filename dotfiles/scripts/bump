@@ -1,0 +1,21 @@
+#!/bin/python
+
+import json
+
+VERSION_FILENAME = "version.json"
+
+with open(VERSION_FILENAME) as f:
+    version_data = json.load(f)
+
+version = version_data["version"]
+*prefix, minor = version.split(".")
+new_minor = int(minor) + 1
+new_version = ".".join((*prefix, str(new_minor)))
+version_data["version"] = new_version
+
+with open(VERSION_FILENAME, "w") as f:
+    json.dump(version_data, f, indent=2)
+    f.write("\n")
+
+msg = f"Bumped {version_data['name']} from {version} to {new_version}"
+print(msg)

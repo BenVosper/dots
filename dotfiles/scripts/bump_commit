@@ -1,0 +1,2 @@
+#!/bin/sh
+bump && git commit -a -m "Bump version"
