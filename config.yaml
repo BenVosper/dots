@@ -74,6 +74,9 @@ dotfiles:
   d_ranger:
     src: config/ranger
     dst: ~/.config/ranger
+  d_rules.d:
+    src: etc/udev/rules.d
+    dst: /etc/udev/rules.d
 profiles:
   omega:
     dotfiles:
@@ -98,3 +101,4 @@ profiles:
     - d_i3
     - d_i3status
     - d_ranger
+    - d_rules.d
