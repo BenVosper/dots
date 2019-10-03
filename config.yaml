@@ -77,6 +77,9 @@ dotfiles:
   d_rules.d:
     src: etc/udev/rules.d
     dst: /etc/udev/rules.d
+  f_npmrc:
+    src: npmrc
+    dst: ~/.npmrc
 profiles:
   omega:
     dotfiles:
@@ -102,3 +105,4 @@ profiles:
     - d_i3status
     - d_ranger
     - d_rules.d
+    - f_npmrc
