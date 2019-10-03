@@ -37,6 +37,7 @@ miniconda3
 mpv
 nano
 netctl
+network-manager-applet
 ntp
 p7zip
 patch
@@ -48,6 +49,7 @@ pngquant
 postgresql-libs
 psmisc
 pycharm-professional
+python-black
 python-certifi
 python-pywal
 ranger
