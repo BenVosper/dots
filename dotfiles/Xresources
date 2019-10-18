@@ -6,6 +6,5 @@ URxvt.depth: 32
 URxvt.background: [80]#000000
 
 URxvt.perl-ext-common: default,resize-font
-URxvt.keysym.C-Down: resize-font:smaller
-URxvt.keysym.C-Up: resize-font:bigger
-
+URxvt.iso14755: false
+URxvt.iso14755_52: false
