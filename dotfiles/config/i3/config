@@ -28,8 +28,8 @@ bindsym $mod+Shift+Tab workspace prev  # !!! Don't remove! Breaks config for som
 new_window 1pixel
 
 bar {
-	font pango: monospace 12
-        status_command i3status | ~/.config/i3status/wrapper.py
+	font pango: NotoSansMono 12
+        status_command i3blocks
 	colors {
 		background #020202
   		focused_workspace $bg #333333 #ffffff
@@ -37,4 +37,5 @@ bar {
                 separator #999999	
 	}
         tray_output eDP1
+        separator_symbol " | "  
 }

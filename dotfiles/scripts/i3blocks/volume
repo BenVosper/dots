@@ -1,0 +1,24 @@
+#/bin/sh
+
+trim() {
+    local var="$*"
+    # remove leading whitespace characters
+    var="${var#"${var%%[![:space:]]*}"}"
+    # remove trailing whitespace characters
+    var="${var%"${var##*[![:space:]]}"}"   
+    echo -n "$var"
+}
+
+SINK_INFO=$(pacmd list-sinks)
+VOL=$(echo "$SINK_INFO" | grep -E "^\s+volume:" | awk -F "/" '{print $2}')
+MUTED=$(echo "$SINK_INFO" | grep -E "^\s+muted:" | awk -F ":" '{print $2}')
+MUTED=$(trim "$MUTED")
+if [ "$MUTED" = "yes" ] ; then
+  echo 🔇
+else
+  VOL=$(trim "$VOL")
+  if [ -z "$VOL" ] ; then 
+    VOL="-"
+  fi
+  echo 🔉 "$VOL"
+fi

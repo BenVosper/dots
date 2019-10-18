@@ -33,22 +33,22 @@ alt + shift + w
 ########################################## AUDIO ########################################
 
 XF86Audio{Raise,Lower}Volume
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1000
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1000 && pkill -SIGRTMIN+10 i3blocks
 
 XF86AudioMute
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -SIGRTMIN+10 i3blocks
 
 XF86AudioPlay
-    playerctl play-pause
+    playerctl play-pause && pkill -SIGRTMIN+11 i3blocks 
 
 ctrl + alt + Tab
-    playerctl play-pause
+    playerctl play-pause && pkill -SIGRTMIN+11 i3blocks 
 
 XF86AudioNext
-    playerctl next
+    playerctl next && pkill -SIGRTMIN+11 i3blocks 
 
 XF86AudioPrev
-    playerctl prev
+    playerctl pre && pkill -SIGRTMIN+11 i3blocks
 
 ########################################### i3 ########################################## 
 
@@ -83,7 +83,7 @@ alt + shift + c
     i3-msg reload
 
 alt + shift + r
-    i3-msg restart
+    i3-msg restart && startcompton
 
 alt + shift + e
     i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'
