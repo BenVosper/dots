@@ -1,7 +1,7 @@
 ###################################### MISC BINDINGS ####################################
 
 alt + Return 
-    urxvt -e /bin/bash
+    termite -e /bin/bash
 
 alt + d
     dmenuwrapper
@@ -39,16 +39,16 @@ XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -SIGRTMIN+10 i3blocks
 
 XF86AudioPlay
-    playerctl play-pause && pkill -SIGRTMIN+11 i3blocks 
+    playerctl play-pause 
 
 ctrl + alt + Tab
-    playerctl play-pause && pkill -SIGRTMIN+11 i3blocks 
+    playerctl play-pause 
 
 XF86AudioNext
-    playerctl next && pkill -SIGRTMIN+11 i3blocks 
+    playerctl next 
 
 XF86AudioPrev
-    playerctl pre && pkill -SIGRTMIN+11 i3blocks
+    playerctl previous
 
 ########################################### i3 ########################################## 
 
