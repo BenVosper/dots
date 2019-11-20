@@ -54,6 +54,6 @@ sxhkd &
 
 setxkbmap -layout gb
 xrdb -merge ~/.Xresources
-compton & -b -d :0 &
+startcompton
 exec i3
 
