@@ -25,7 +25,6 @@
 	ufm = "!git fetch origin master:master; git rebase master"                 # Pull master then rebase current branch
 	ufmp = "!git fetch origin master:master; git rebase master; git fpush"     # As above, then push with --force
 	pop = reset HEAD~1                                                         # Reset last commit
-	no = !powershell.exe -command 'git cb | git psuo'
 	wang = "!(git commit -a --amend --no-edit; git fpush)"                     # Quickly amend and push last commit
 [commit]
 	gpgSign = true
