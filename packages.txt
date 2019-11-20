@@ -14,11 +14,11 @@ firefox
 flex
 gcc-fortran
 gimp
-google-chrome
 grub
 gscreenshot
 gvim
 i3-gaps
+i3blocks
 i7z
 iputils
 j4-dmenu-desktop-git
@@ -38,6 +38,7 @@ mpv
 nano
 netctl
 network-manager-applet
+ngrok
 ntp
 p7zip
 patch
@@ -45,7 +46,6 @@ pavucontrol
 peek
 pkgconf
 playerctl
-pngquant
 postgresql-libs
 psmisc
 pycharm-professional
@@ -60,6 +60,7 @@ spotify
 sxhkd
 sxlock-git
 terminus-font
+termite
 terraform
 ttf-fira-code
 ttf-inconsolata
@@ -69,7 +70,6 @@ urxvt-resize-font-git
 usbutils
 vi
 wavebox-bin
-which
 xautolock
 xdg-user-dirs
 xf86-input-synaptics
