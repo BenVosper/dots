@@ -1,10 +1,1 @@
 Xft.dpi: 150
-
-URxvt.font: xft:Noto Sans Mono:size=12:antialias=true:hinting=true
-URxvt.scrollBar: false
-URxvt.depth: 32
-URxvt.background: [80]#000000
-
-URxvt.perl-ext-common: default,resize-font
-URxvt.iso14755: false
-URxvt.iso14755_52: false
