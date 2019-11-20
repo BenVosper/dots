@@ -1,7 +1,7 @@
 #!/bin/sh
 
 term () {
-    i3-msg exec "urxvt -e /bin/bash"
+    i3-msg exec "termite -e /bin/bash"
 }
 
 cm
@@ -22,7 +22,7 @@ i3-msg workspace "3"
 sleep 1
 i3-msg move workspace to output left
 sleep 1
-i3-msg exec brave 
+i3-msg exec vivaldi-stable 
 sleep 5
 
 i3-msg workspace "4"

@@ -23,7 +23,7 @@ else:
     commasplitstatus_batteries=[]
     percentleft_batteries=[]
     time = ""
-    for battery in batteries:
+    for battery in filter(lambda battery: "unavailable" not in battery, batteries):
         if battery!='':
             state_batteries.append(battery.split(": ")[1].split(", ")[0])
             commasplitstatus = battery.split(", ")
@@ -75,7 +75,6 @@ else:
     fulltext += f"{percentleft}%"
     fulltext += timeleft
 
-print(fulltext)
 print(fulltext)
 if percentleft < 10:
     exit(33)

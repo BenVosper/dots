@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+import gi
+gi.require_version("Playerctl", "2.0")
+from gi.repository import Playerctl, GLib
+from subprocess import run
+from time import time
+
+max_signal_frequency = 0.1 
+last_signal_sent = time()
+
+
+def refresh_status_block(*args, **kwargs):
+    global last_signal_sent
+    now = time()
+    if now - last_signal_sent < max_signal_frequency:
+        # Don't spam the refresh command
+        return   
+    last_signal_sent = now 
+    run(["pkill",  "-SIGRTMIN+11", "i3blocks"]) 
+
+def init_player(name):
+    player = Playerctl.Player.new_from_name(name)
+    player.connect("metadata", refresh_status_block, manager)
+    player.connect("playback-status", refresh_status_block, manager)    
+    manager.manage_player(player)
+
+
+def on_name_appeared(manager, name):
+    init_player(name)
+
+
+manager = Playerctl.PlayerManager()
+manager.connect('name-appeared', on_name_appeared)
+
+for name in manager.props.player_names:
+    init_player(name)
+
+main = GLib.MainLoop()
+main.run()
