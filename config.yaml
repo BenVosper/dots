@@ -80,6 +80,9 @@ dotfiles:
   f_spotify.desktop:
     src: local/share/applications/spotify.desktop
     dst: ~/.local/share/applications/spotify.desktop
+  d_i3blocks:
+    src: config/i3blocks
+    dst: ~/.config/i3blocks
 profiles:
   omega:
     dotfiles:
@@ -106,3 +109,4 @@ profiles:
     - d_rules.d
     - f_npmrc
     - f_spotify.desktop
+    - d_i3blocks
