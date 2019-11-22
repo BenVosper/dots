@@ -34,6 +34,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+setxkbmap -layout gb
+xrdb -merge ~/.Xresources
+
 # Pick a random wallpaper and colourscheme
 wal -i ~/images
 
@@ -49,11 +52,11 @@ xautolock -time 2 -corners "----" -cornersize 50 -locker lock &
 # Reset touchscreen output
 xinput --map-to-output 'ELAN Touchscreen' eDP1
 
-# Start hotkey daemon
+# Start daemons
 sxhkd &
-
-setxkbmap -layout gb
-xrdb -merge ~/.Xresources
+playerctl-manager &
 startcompton
+
+# Go
 exec i3
 
