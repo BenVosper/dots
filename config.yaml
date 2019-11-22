@@ -50,9 +50,6 @@ dotfiles:
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
-  f_xbindkeysrc:
-    dst: ~/.xbindkeysrc
-    src: xbindkeysrc
   f_xinitrc:
     dst: ~/.xinitrc
     src: xinitrc
@@ -65,9 +62,6 @@ dotfiles:
   d_i3:
     src: config/i3
     dst: ~/.config/i3
-  d_i3status:
-    src: config/i3status
-    dst: ~/.config/i3status
   d_ranger:
     src: config/ranger
     dst: ~/.config/ranger
@@ -89,7 +83,6 @@ profiles:
     - f_bashrc
     - f_bash_profile
     - f_vimrc
-    - f_xbindkeysrc
     - f_xinitrc
     - f_xresources
     - f_local.conf
@@ -104,7 +97,6 @@ profiles:
     - d_sxhkd
     - d_scripts
     - d_i3
-    - d_i3status
     - d_ranger
     - d_rules.d
     - f_npmrc
