@@ -15,7 +15,7 @@ i3-msg workspace "2"
 sleep 1
 i3-msg move workspace to output left
 sleep 1
-i3-msg exec wavebox
+i3-msg exec "/bin/bash -c '/opt/wavebox.io/wavebox/wavebox-launcher '"
 sleep 5
 
 i3-msg workspace "3"
