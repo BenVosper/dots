@@ -80,6 +80,9 @@ dotfiles:
   d_termite:
     src: config/termite
     dst: ~/.config/termite
+  f_override.conf:
+    src: etc/systemd/system/docker.service.d/override.conf
+    dst: /etc/systemd/system/docker.service.d/override.conf
 profiles:
   omega:
     dotfiles:
@@ -106,3 +109,4 @@ profiles:
     - f_spotify.desktop
     - d_i3blocks
     - d_termite
+    - f_override.conf
