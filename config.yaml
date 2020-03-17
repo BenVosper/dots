@@ -77,6 +77,9 @@ dotfiles:
   d_i3blocks:
     src: config/i3blocks
     dst: ~/.config/i3blocks
+  d_termite:
+    src: config/termite
+    dst: ~/.config/termite
 profiles:
   omega:
     dotfiles:
@@ -102,3 +105,4 @@ profiles:
     - f_npmrc
     - f_spotify.desktop
     - d_i3blocks
+    - d_termite
