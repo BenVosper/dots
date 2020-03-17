@@ -83,6 +83,9 @@ dotfiles:
   f_override.conf:
     src: etc/systemd/system/docker.service.d/override.conf
     dst: /etc/systemd/system/docker.service.d/override.conf
+  d_gtk-3.0:
+    src: config/gtk-3.0
+    dst: ~/.config/gtk-3.0
 profiles:
   omega:
     dotfiles:
@@ -110,6 +113,7 @@ profiles:
     - d_i3blocks
     - d_termite
     - f_override.conf
+    - d_gtk-3.0
   beta:
     dotfiles:
     - f_bashrc
