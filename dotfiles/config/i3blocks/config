@@ -11,6 +11,10 @@ command=$SCRIPT_DIR/volume
 interval=30
 signal=10
 
+[ethernet]
+command=$SCRIPT_DIR/ethernet
+interval=60
+
 [wifi]
 command=$SCRIPT_DIR/ssid
 interval=60
