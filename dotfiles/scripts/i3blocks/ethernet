@@ -1,0 +1,2 @@
+#!/bin/sh
+nmcli device | grep -q "ethernet[[:space:]]\+connected" - && echo 🌐

@@ -41,7 +41,9 @@ else:
             if p>0:
                 percentleft_batteries.append(p)
             commasplitstatus_batteries.append(commasplitstatus)
-    state = state_batteries[0]
+    if not state_batteries:
+        # No available batteries found
+        exit(0) 
     commasplitstatus = commasplitstatus_batteries[0]
     if percentleft_batteries:
         percentleft = int(sum(percentleft_batteries)/len(percentleft_batteries))

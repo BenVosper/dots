@@ -9,14 +9,25 @@ trim() {
     echo -n "$var"
 }
 
-SINK_INFO=$(pacmd list-sinks)
-VOL=$(echo "$SINK_INFO" | grep -E "^\s+volume:" | awk -F "/" '{print $2}')
-MUTED=$(echo "$SINK_INFO" | grep -E "^\s+muted:" | awk -F ":" '{print $2}')
-MUTED=$(trim "$MUTED")
+
+getdefaultsinkname() {
+    pacmd stat | awk -F": " '/^Default sink name: /{print $2}'
+}
+
+SINKS=$(pacmd list-sinks)
+VOL=$(awk '/^\s+name: /{indefault = $2 == "<'$(getdefaultsinkname)'>"}
+      /^\s+volume: / && indefault {print $5; exit}' <<EOL
+$SINKS
+EOL
+)
+MUTED=$(awk '/^\s+name: /{indefault = $2 == "<'$(getdefaultsinkname)'>"}
+        /^\s+muted: / && indefault {print $2; exit}' <<EOL
+$SINKS
+EOL
+)
 if [ "$MUTED" = "yes" ] ; then
   echo 🔇
 else
-  VOL=$(trim "$VOL")
   if [ -z "$VOL" ] ; then 
     VOL="-"
   fi
