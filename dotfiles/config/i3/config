@@ -36,6 +36,6 @@ bar {
                 statusline #999999
                 separator #999999	
 	}
-        tray_output eDP1
+        tray_output DP-3
         separator_symbol " | "  
 }
