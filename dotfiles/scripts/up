@@ -1,10 +1,12 @@
 #!/bin/sh
 
 term () {
-    i3-msg exec "termite -e /bin/bash"
+    i3-msg exec "alacritty -e /bin/bash"
 }
 
-cm
+SCRATCH_MARK="scratch"
+
+i3-msg mark "$SCRATCH_MARK"
 sleep 1
 
 i3-msg workspace "1"
@@ -28,17 +30,18 @@ sleep 5
 i3-msg workspace "4"
 sleep 1
 i3-msg move workspace to output left
-term
-term
-
-i3-msg workspace "5"
 sleep 1
 i3-msg exec pycharm
 sleep 10
 
-i3-msg workspace "1"
+i3-msg workspace "5"
 sleep 1
-i3-msg focus left
+term
+term
+sleep 1
+
+sleep 1
+i3-msg [con_mark="$SCRATCH_MARK"] focus
 sleep 1
 i3-msg move scratchpad
 clear
