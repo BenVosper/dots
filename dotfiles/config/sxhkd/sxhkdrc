@@ -18,6 +18,12 @@ alt + F4
 alt + F5
     umountdevice
 
+alt + F6
+    xkill
+
+alt + F7
+    sleep 0.2; scrot '/home/benv/screenshots/%F_%T.png' -s
+
 alt + F12
     i3-nagbar -t warning -m 'Shutdown?' -B 'Yes, shutdown' 'shutdown now'
 
