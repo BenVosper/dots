@@ -1,7 +1,7 @@
 ###################################### MISC BINDINGS ####################################
 
-alt + Return
-    termite -e /bin/bash
+alt + Return 
+    alacritty -e /bin/bash
 
 alt + d
     dmenuwrapper
@@ -33,7 +33,7 @@ alt + F11
 alt + grave
     new-workspace
 
-alt + shift + w
+alt + shift + w 
     wal -i ~/images
 
 ########################################## AUDIO ########################################
@@ -45,18 +45,18 @@ XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -SIGRTMIN+10 i3blocks
 
 XF86AudioPlay
-    playerctl play-pause
+    playerctl play-pause 
 
 ctrl + alt + Tab
-    playerctl play-pause
+    playerctl play-pause 
 
 XF86AudioNext
-    playerctl next
+    playerctl next 
 
 XF86AudioPrev
     playerctl previous
 
-########################################### i3 ##########################################
+########################################### i3 ########################################## 
 
 alt + shift + q
     i3-msg kill
