@@ -89,6 +89,9 @@ dotfiles:
   f_gtkrc-2.0:
     src: gtkrc-2.0
     dst: ~/.gtkrc-2.0
+  f_sxlock.service:
+    src: etc/systemd/system/sxlock.service
+    dst: /etc/systemd/system/sxlock.service
 profiles:
   omega:
     dotfiles:
@@ -143,3 +146,4 @@ profiles:
     - d_termite
     - f_override.conf
 
+    - f_sxlock.service
