@@ -1,0 +1,2 @@
+#!/bin/sh
+~/code/dots/dotdrop.sh --cfg=~/code/dots/config-root.yaml "$@"
