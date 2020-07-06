@@ -36,4 +36,3 @@ source ~/.cache/wal/colors-tty.sh
 # Set cursor to steady bar
 echo -e "\033[6 q"
 
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
