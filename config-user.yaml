@@ -29,9 +29,6 @@ dotfiles:
   f_bashrc:
     dst: ~/.bashrc
     src: bashrc
-  f_compton.conf:
-    dst: ~/.config/compton.conf
-    src: config/compton.conf
   f_gitconfig:
     dst: ~/.gitconfig
     src: gitconfig
@@ -68,6 +65,9 @@ dotfiles:
   f_gtkrc-2.0:
     src: gtkrc-2.0
     dst: ~/.gtkrc-2.0
+  f_picom.conf:
+    src: config/picom/picom.conf
+    dst: ~/.config/picom/picom.conf
 profiles:
   beta:
     dotfiles:
@@ -78,7 +78,6 @@ profiles:
     - f_xresources
     - d_git-templates
     - f_gitconfig
-    - f_compton.conf
     - f_archey3.cfg
     - d_sxhkd
     - d_scripts
@@ -87,3 +86,4 @@ profiles:
     - f_spotify.desktop
     - d_i3blocks
     - d_termite
+    - f_picom.conf
