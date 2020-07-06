@@ -3,4 +3,4 @@ PID=$(pidof compton)
 if [ ! -z "$PID" ] ; then
    kill -9 "$PID"
 fi
-compton -b 
+compton -b -C --experimental-backends 
