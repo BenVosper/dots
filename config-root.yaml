@@ -1,0 +1,43 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop
+dotfiles:
+  f_local.conf:
+    dst: /etc/fonts/local.conf
+    src: etc/fonts/local.conf
+  f_user-dirs.defaults:
+    dst: /etc/xdg/user-dirs.defaults
+    src: etc/xdg/user-dirs.defaults
+  f_vconsole.conf:
+    dst: /etc/vconsole.conf
+    src: etc/vconsole.conf
+  f_override.conf:
+    src: etc/systemd/system/docker.service.d/override.conf
+    dst: /etc/systemd/system/docker.service.d/override.conf
+  f_sxlock.service:
+    src: etc/systemd/system/sxlock.service
+    dst: /etc/systemd/system/sxlock.service
+  d_rules.d:
+    src: etc/udev/rules.d
+    dst: /etc/udev/rules.d
+  f_70-synaptics.conf:
+    dst: /etc/X11/xorg.conf.d/70-synaptics.conf
+    src: etc/X11/xorg.conf.d/70-synaptics.conf
+profiles:
+  omega:
+    dotfiles:
+    - f_local.conf
+    - f_user-dirs.defaults
+    - f_vconsole.conf
+    - f_override.conf
+    - f_sxlock.service
+    - f_70-synaptics.conf
