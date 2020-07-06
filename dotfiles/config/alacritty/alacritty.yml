@@ -1,0 +1,10 @@
+background_opacity: 0.8
+
+font:
+  normal:
+    family: Noto Sans Mono
+
+  size: 10
+
+  offset:
+    y: 5

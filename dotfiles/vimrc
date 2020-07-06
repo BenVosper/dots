@@ -19,6 +19,9 @@ autocmd VimLeave * silent !echo -ne "\e[6 q"
 " Allow mouse scrolling
 set mouse=a
 
+" For alacritty compatibility
+set ttymouse=sgr
+
 " Move lines
 nnoremap <C-Down> :m .+1<CR>==
 nnoremap <C-Up> :m .-2<CR>==
@@ -35,4 +38,3 @@ autocmd BufWritePost */i3blocks/config !i3-msg reload
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost /home/benv/scripts/* !chmod +x /home/benv/scripts/*
 autocmd BufWritePost /home/benv/.Xresources !xrdb -merge </home/benv/.Xresources
-autocmd BufWritePost */termite/config !killall -USR1 termite
