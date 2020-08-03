@@ -43,6 +43,7 @@ else:
             commasplitstatus_batteries.append(commasplitstatus)
     if not state_batteries:
         # No available batteries found
+        print("No batteries found??")
         exit(0) 
     commasplitstatus = commasplitstatus_batteries[0]
     if percentleft_batteries:
