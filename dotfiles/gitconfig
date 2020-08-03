@@ -27,6 +27,7 @@
 	pop = reset HEAD~1                                                         # Reset last commit
 	wang = "!(git commit -a --amend --no-edit; git fpush)"                     # Quickly amend and push last commit
         hardr = !git reset --hard origin/"$(git cb)"                               # Hard reset current branch
+        cp = cherry-pick
 [commit]
 	gpgSign = true
 [rebase]
