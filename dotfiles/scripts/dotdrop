@@ -1,2 +1,2 @@
 #!/bin/sh
-~/code/dots/dotdrop.sh --cfg=~/code/dots/config-user.yaml "$@"
+/usr/bin/dotdrop --cfg=~/code/dots/config-user.yaml "$@"
