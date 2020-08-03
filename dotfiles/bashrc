@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 alias a='archey3'
 alias g='git'
 alias v='vim'
-alias r='ranger'
+alias nnn='nnn -c'
 
 source /usr/share/git/completion/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
