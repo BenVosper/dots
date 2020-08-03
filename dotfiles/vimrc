@@ -8,6 +8,9 @@ map <C-v> "+P
 map <C-e> :wq<CR> 
 imap <C-e> <Esc>:wq<CR>
 
+" Disable macro recording
+map q <Nop>
+
 " Save files as sudo without doing 'sudo vim'
 cmap w!! w !sudo tee > /dev/null %
 
