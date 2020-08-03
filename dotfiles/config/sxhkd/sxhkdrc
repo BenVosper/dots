@@ -22,7 +22,7 @@ alt + F6
     xkill
 
 alt + F7
-    sleep 0.2; scrot '/home/benv/screenshots/%F_%T.png' -s
+    sleep 0.2; maim -slB -c 0,0,0,0.6 -b 0 /home/benv/screenshots/$(date +%F_%T).png
 
 alt + F12
     i3-nagbar -t warning -m 'Shutdown?' -B 'Yes, shutdown' 'shutdown now'
