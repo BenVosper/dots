@@ -24,7 +24,7 @@ i3-msg workspace "3"
 sleep 1
 i3-msg move workspace to output left
 sleep 1
-i3-msg exec vivaldi-stable 
+i3-msg exec "$BROWSER" 
 sleep 5
 
 i3-msg workspace "4"
