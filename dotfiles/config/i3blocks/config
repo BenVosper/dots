@@ -19,11 +19,6 @@ interval=60
 command=$SCRIPT_DIR/ssid
 interval=60
 
-[battery]
-command=$SCRIPT_DIR/battery
-interval=10
-markup=pango
-
 [date]
 command=date +"%d-%m-%Y %H:%M:%S"
 interval=5
