@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd /tmp/
+wget https://files.dev47apps.net/linux/droidcam_latest.zip
+unzip droidcam_latest.zip -d droidcam && cd droidcam 
+sudo ./install 1920 1080
