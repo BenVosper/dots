@@ -65,6 +65,9 @@ dotfiles:
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
+  f_linopenrc:
+    src: linopenrc
+    dst: ~/.linopenrc
 profiles:
   beta:
     dotfiles:
@@ -84,3 +87,4 @@ profiles:
     - d_i3blocks
     - f_picom.conf
     - d_alacritty
+    - f_linopenrc
