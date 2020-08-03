@@ -35,6 +35,7 @@ linux-lts
 logrotate
 lostfiles
 lvm2
+maim
 make
 man-db
 man-pages
@@ -63,7 +64,6 @@ python-pywal
 python37
 reiserfsprogs
 scribus
-scrot
 sl
 solaar-git
 spotify
