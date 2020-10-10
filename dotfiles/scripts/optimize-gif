@@ -1,0 +1,2 @@
+#/bin/sh
+gifsicle "$1" --optimize=3 --colors=256 -o "$1"

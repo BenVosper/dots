@@ -8,39 +8,34 @@ SCRATCH_MARK="scratch"
 
 i3-msg mark "$SCRATCH_MARK"
 sleep 1
-
-i3-msg workspace "1"
-i3-msg exec "spotify --force-device-scale-factor=1.75 %U"
+i3-msg exec "/bin/bash -c '/opt/wavebox.io/wavebox/wavebox-launcher '"
 sleep 5
 
 i3-msg workspace "2"
 sleep 1
 i3-msg move workspace to output left
 sleep 1
-i3-msg exec "/bin/bash -c '/opt/wavebox.io/wavebox/wavebox-launcher '"
+i3-msg exec "$BROWSER" 
 sleep 5
 
 i3-msg workspace "3"
 sleep 1
 i3-msg move workspace to output left
 sleep 1
-i3-msg exec "$BROWSER" 
-sleep 5
-
-i3-msg workspace "4"
-sleep 1
-i3-msg move workspace to output left
-sleep 1
 i3-msg exec pycharm
 sleep 10
 
-i3-msg workspace "5"
+i3-msg workspace "4"
 sleep 1
 term
 term
 sleep 1
 
+i3-msg workspace "5"
 sleep 1
+i3-msg exec "spotify --force-device-scale-factor=1.75 %U"
+sleep 1
+
 i3-msg [con_mark="$SCRATCH_MARK"] focus
 sleep 1
 i3-msg move scratchpad
