@@ -7,6 +7,7 @@ for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 1
 smart_gaps on
+smart_borders no_gaps
 
 set_from_resource $fg i3wm.color1 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
@@ -31,11 +32,15 @@ bar {
 	font pango: NotoSansMono 12
         status_command i3blocks
 	colors {
-		background #020202
-  		focused_workspace $bg #333333 #ffffff
+		background #333333
+                active_workspace $bg #444444 #999999 
+  		focused_workspace $bg #555555 #999999
                 statusline #999999
                 separator #999999	
 	}
         tray_output DP-3
         separator_symbol " | "  
+        workspace_min_width 40
+        mode hide
+        modifier $mod
 }
