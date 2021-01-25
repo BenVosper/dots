@@ -5,7 +5,7 @@
 source ~/.secrets.sh
 
 export EDITOR="vim"
-export BROWSER="iridium-browser"
+export BROWSER="firefox"
 export VENV_DIR="/home/benv/.venv"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
