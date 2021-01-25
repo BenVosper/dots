@@ -33,8 +33,8 @@ sleep 1
 
 i3-msg workspace "5"
 sleep 1
-i3-msg exec "spotify --force-device-scale-factor=1.75 %U"
-sleep 1
+i3-msg exec "spotify --force-device-scale-factor=1.5 %U"
+sleep 5
 
 i3-msg workspace "1"
 i3-msg [con_mark="$SCRATCH_MARK"] focus
