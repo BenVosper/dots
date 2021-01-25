@@ -1,0 +1,2 @@
+#!/bin/sh
+playerctl -l | grep spotify && playerctl play-pause -p spotify || playerctl play-pause
