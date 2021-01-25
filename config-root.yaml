@@ -32,6 +32,10 @@ dotfiles:
   f_70-synaptics.conf:
     dst: /etc/X11/xorg.conf.d/70-synaptics.conf
     src: etc/X11/xorg.conf.d/70-synaptics.conf
+  f_00-keyboard.conf:
+    src: etc/X11/xorg.conf.d/00-keyboard.conf
+    dst: /etc/X11/xorg.conf.d/00-keyboard.conf
+
 profiles:
   omega:
     dotfiles:
@@ -41,3 +45,5 @@ profiles:
     - f_override.conf
     - f_sxlock.service
     - f_70-synaptics.conf
+    - f_00-keyboard.conf
+
