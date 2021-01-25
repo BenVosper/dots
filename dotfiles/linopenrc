@@ -17,16 +17,17 @@ interm=nnn
 # which linopen chooses the program as well.
 
 # 1. File extension
-# .png:sxiv
-# .mp4:mplayer
 # .txt:vim
+.zip:vim
 
 # 2. Mime type
 # image/png:sxiv
 # video/mp4:mplayer
-# text/plain:vim
+text/plain:vim
 application/pdf:zathura
 image/gif:mpv
+application/json:vim
+image/svg+xml:vim
 
 # 3. Mime category
 image:feh
@@ -41,6 +42,7 @@ text:vim
 ?'^http:\/\/':$BROWSER
 ?'^https:\/\/':$BROWSER
 ?'^www.':$BROWSER
+?'^zoommtg:\/\/':zoom
 # ?'^dvd:\/\/':mplayer
 # ?'^cdda:\/\/':mplayer->interm
 
