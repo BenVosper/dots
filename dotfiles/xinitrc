@@ -55,6 +55,7 @@ xinput --map-to-output 'ELAN Touchscreen' eDP1
 sxhkd &
 playerctl-manager &
 startpicom
+i3altlayout &
 
 # Go
 exec i3
