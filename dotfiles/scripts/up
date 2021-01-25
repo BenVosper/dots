@@ -37,8 +37,7 @@ i3-msg exec pycharm
 sleep 10
 
 i3-msg workspace "1"
-sleep 1
-i3-msg focus left
+i3-msg [con_mark="$SCRATCH_MARK"] focus
 sleep 1
 i3-msg move scratchpad
 clear
