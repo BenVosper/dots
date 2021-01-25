@@ -19,7 +19,7 @@ alt + F5
     umountdevice
 
 alt + F6
-    xkill
+    pkill xkill || xkill
 
 alt + F7
     sleep 0.2; maim -slB -c 0,0,0,0.6 -b 0 /home/benv/screenshots/$(date +%F_%T).png
@@ -45,10 +45,10 @@ XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -SIGRTMIN+10 i3blocks
 
 XF86AudioPlay
-    playerctl play-pause 
+    play-pause-spotify-priority
 
 ctrl + alt + Tab
-    playerctl play-pause 
+    play-pause-spotify-priority 
 
 XF86AudioNext
     playerctl next 
@@ -89,7 +89,7 @@ alt + shift + c
     i3-msg reload
 
 alt + shift + r
-    i3-msg restart && startpicom
+    i3-msg restart && startpicom && i3altlayout
 
 alt + shift + e
     i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'
@@ -101,8 +101,20 @@ alt + minus
     i3-msg scratchpad show
 
 alt + Tab
-    i3-msg workspace next
+    i3-msg workspace next_on_output
 
 alt + shift + Tab
-    i3-msg workspace prev
+    i3-msg workspace prev_on_output
+
+button6
+    i3-msg workspace next_on_output
+
+button7
+    i3-msg workspace prev_on_output
+
+alt + button6
+    i3-msg workspace next_on_output
+
+alt + button7
+    i3-msg workspace prev_on_output
 
