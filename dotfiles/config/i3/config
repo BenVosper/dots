@@ -29,18 +29,16 @@ bindsym $mod+Shift+Tab workspace prev  # !!! Don't remove! Breaks config for som
 new_window 1pixel
 
 bar {
-	font pango: NotoSansMono 12
+	font pango:FontAwesome 10
         status_command i3blocks
 	colors {
 		background #333333
                 active_workspace $bg #444444 #999999 
   		focused_workspace $bg #555555 #999999
                 statusline #999999
-                separator #999999	
 	}
         tray_output eDP1
-        separator_symbol " | "  
+        separator_symbol "  "  
         workspace_min_width 40
-        mode hide
         modifier $mod
 }

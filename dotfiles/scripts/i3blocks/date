@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "<span color='$1'></span> $(date +'%d-%m-%Y')"

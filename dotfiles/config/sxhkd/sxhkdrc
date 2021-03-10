@@ -1,6 +1,6 @@
 ###################################### MISC BINDINGS ####################################
 
-alt + Return 
+alt + Return
     alacritty -e /bin/bash
 
 alt + d
@@ -33,8 +33,8 @@ alt + F11
 alt + grave
     new-workspace
 
-alt + shift + w 
-    wal -i ~/images
+alt + shift + w
+    wal -i ~/images && for i in 10 11 12 13 14 15 16; do pkill -SIGRTMIN+$i i3blocks; done
 
 ########################################## AUDIO ########################################
 
@@ -48,15 +48,15 @@ XF86AudioPlay
     play-pause-spotify-priority
 
 ctrl + alt + Tab
-    play-pause-spotify-priority 
+    play-pause-spotify-priority
 
 XF86AudioNext
-    playerctl next 
+    playerctl next
 
 XF86AudioPrev
     playerctl previous
 
-########################################### i3 ########################################## 
+########################################### i3 ##########################################
 
 alt + shift + q
     i3-msg kill

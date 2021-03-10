@@ -2,26 +2,51 @@
 
 from html import escape
 from subprocess import run
+import sys
+
+
+ACCENT_COL = sys.argv[1] if len(sys.argv) > 1 else "#f0f0f0"
+
 
 def get_players():
-    return run(["playerctl", "-l"], capture_output=True).stdout.decode().strip().splitlines()
+    return (
+        run(["playerctl", "-l"], capture_output=True)
+        .stdout.decode()
+        .strip()
+        .splitlines()
+    )
+
 
 def get_status(player_name):
-    return run(["playerctl", "-p", player_name, "status"], capture_output=True).stdout.decode().strip()
-    
+    return (
+        run(["playerctl", "-p", player_name, "status"], capture_output=True)
+        .stdout.decode()
+        .strip()
+    )
+
+
 def get_now_playing(player_name):
     process = run(
-        ["playerctl","-p", player_name, "metadata", "--format", "{{ artist }}\n{{ title }}"],
-        capture_output=True
-     )
+        [
+            "playerctl",
+            "-p",
+            player_name,
+            "metadata",
+            "--format",
+            "{{ artist }}\n{{ title }}",
+        ],
+        capture_output=True,
+    )
     if process.returncode != 0:
         return ""
 
     artist, title = escape(process.stdout.decode()).splitlines()
-    return f"🎵: {artist} - <b><i>{title}</i></b>" 
+    return f"<span color='{ACCENT_COL}'></span> {artist} - <b><i>{title}</i></b>"
+
 
 players = get_players()
 active_players = filter(lambda player: get_status(player).lower() == "playing", players)
 first_active_player = next(active_players, None)
 
-print(get_now_playing(first_active_player))
+if first_active_player:
+    print(get_now_playing(first_active_player))
