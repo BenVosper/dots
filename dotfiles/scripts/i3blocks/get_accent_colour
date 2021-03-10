@@ -1,0 +1,2 @@
+#!/bin/sh
+xgetres i3wm.color2 || echo "f4f4f4"

@@ -1,24 +1,44 @@
 SCRIPT_DIR=/home/benv/scripts/i3blocks
 
 [nowplaying]
-command=$SCRIPT_DIR/nowplaying
+command=$SCRIPT_DIR/nowplaying $($SCRIPT_DIR/get_accent_colour)
 interval=30
 signal=11
 markup=pango
 
 [volume]
-command=$SCRIPT_DIR/volume
+command=$SCRIPT_DIR/volume $($SCRIPT_DIR/get_accent_colour)
 interval=30
 signal=10
+markup=pango
+
+[disk]
+command=$SCRIPT_DIR/disk $($SCRIPT_DIR/get_accent_colour)
+DIR=/dev/nvme0n1p1
+interval=60
+signal=12
+markup=pango
 
 [ethernet]
-command=$SCRIPT_DIR/ethernet
+command=$SCRIPT_DIR/ethernet $($SCRIPT_DIR/get_accent_colour)
 interval=60
+signal=13
+markup=pango
 
 [wifi]
-command=$SCRIPT_DIR/ssid
+command=$SCRIPT_DIR/ssid $($SCRIPT_DIR/get_accent_colour)
 interval=60
+signal=14
+markup=pango
 
 [date]
-command=date +"%d-%m-%Y %H:%M:%S"
+command=$SCRIPT_DIR/date $($SCRIPT_DIR/get_accent_colour)
+interval=60
+signal=15
+markup=pango
+
+[time]
+command=$SCRIPT_DIR/time $($SCRIPT_DIR/get_accent_colour)
 interval=5
+signal=16
+markup=pango

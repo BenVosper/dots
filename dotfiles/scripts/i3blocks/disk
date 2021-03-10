@@ -1,0 +1,11 @@
+#!/bin/sh
+
+used_str=$(df -h "$DIR" | awk '/[0-9]/ {print $5}')
+used=$(echo "$used_str" | sed 's/[%]//')
+
+
+if [ $used -gt 90 ] ; then
+        echo "<span color='$1'></span> <span color='#ff0000'>$used_str</span> "
+else
+        echo "<span color='$1'></span> $used_str"
+fi
