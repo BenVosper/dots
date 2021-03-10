@@ -1,8 +1,8 @@
 #/bin/sh
 
 case $BLOCK_BUTTON in
-  1) pgrep pavucontrol >> /dev/null && 
-       i3-msg "[class=Pavucontrol] focus" >> /dev/null || 
+  1) pgrep pavucontrol >> /dev/null &&
+       i3-msg "[class=Pavucontrol] focus" >> /dev/null ||
        i3-msg "exec pavucontrol" >> /dev/null
 esac
 
@@ -11,7 +11,7 @@ trim() {
     # remove leading whitespace characters
     var="${var#"${var%%[![:space:]]*}"}"
     # remove trailing whitespace characters
-    var="${var%"${var##*[![:space:]]}"}"   
+    var="${var%"${var##*[![:space:]]}"}"
     echo -n "$var"
 }
 
@@ -32,10 +32,10 @@ $SINKS
 EOL
 )
 if [ "$MUTED" = "yes" ] ; then
-  echo 🔇
+  echo "<span color='$1'></span>"
 else
-  if [ -z "$VOL" ] ; then 
+  if [ -z "$VOL" ] ; then
     VOL="-"
   fi
-  echo 🔉 "$VOL"
+  echo "<span color='$1'></span> $VOL"
 fi

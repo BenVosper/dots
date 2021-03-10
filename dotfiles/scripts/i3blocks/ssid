@@ -1,7 +1,5 @@
 #!/bin/sh
 SSID=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2)
 if [ ! -z "$SSID" ]; then
-    echo 📡 "$SSID"
-    echo
-    echo "#178129"
+    echo "<span color='$1'></span> $SSID"
 fi
