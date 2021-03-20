@@ -1,0 +1,17 @@
+#!/bin/sh
+status=$(acpi)
+charge=$(echo $status | grep -oP ', \K(.*)(?=%)')
+charging=$(echo $status | grep -q Charg && echo "")
+
+if [ "$charge" -gt 95 ] ; then
+    echo "<span color='$1'>${charging:-}</span> $charge%"
+elif [ "$charge" -gt 75 ] ; then
+    echo "<span color='$1'>${charging:-}</span> $charge%"
+elif [ "$charge" -gt 50 ] ; then
+    echo "<span color='$1'>${charging:-}</span> $charge%"
+elif [ "$charge" -gt 25 ] ; then
+    echo "<span color='$1'>${charging:-}</span> $charge%"
+else
+    echo "<span color='$1'>${charging:-}</span> <span color='#ff0000'>$charge%</span>"
+fi
+
