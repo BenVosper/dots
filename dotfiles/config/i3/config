@@ -38,9 +38,8 @@ bar {
                 statusline #999999
                 separator #999999	
 	}
-        tray_output eDP1
+        tray_output LVDS1
         separator_symbol " | "  
         workspace_min_width 40
-        mode hide
         modifier $mod
 }

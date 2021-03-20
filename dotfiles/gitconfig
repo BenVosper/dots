@@ -2,7 +2,7 @@
 	name = BenVosper
 [user]
 	email = ben-vosper@hotmail.com
-	signingkey = 81AD0C8CD70D7C70
+	signingkey = D2E8EB9C1F181F8D
 [core]
 	editor = vim
 
