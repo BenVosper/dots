@@ -37,7 +37,7 @@ dotfiles:
     dst: /etc/X11/xorg.conf.d/00-keyboard.conf
 
 profiles:
-  omega:
+  gamma:
     dotfiles:
     - f_local.conf
     - f_user-dirs.defaults

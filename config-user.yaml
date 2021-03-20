@@ -75,7 +75,7 @@ dotfiles:
     src: linopenrc
     dst: ~/.linopenrc
 profiles:
-  omega:
+  gamma:
     dotfiles:
     - f_bashrc
     - f_bash_profile
