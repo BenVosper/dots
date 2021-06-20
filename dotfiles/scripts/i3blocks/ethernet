@@ -1,2 +1,2 @@
 #!/bin/sh
-nmcli device | grep -q "ethernet[[:space:]]\+connected" - && echo "<span color='$1'></span>"
+nmcli device | grep -q "ethernet[[:space:]]\+connected" - && echo "<span color='$1'></span>" || echo
