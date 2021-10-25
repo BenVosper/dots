@@ -106,12 +106,6 @@ alt + Tab
 alt + shift + Tab
     i3-msg workspace prev_on_output
 
-button6
-    i3-msg workspace prev_on_output
-
-button7
-    i3-msg workspace next_on_output
-
 alt + button6
     i3-msg workspace prev_on_output
 
