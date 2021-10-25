@@ -1,5 +1,5 @@
 #!/bin/sh
-status=$(acpi)
+status=$(acpi | grep -wv unavailable | head -n 1)
 charge=$(echo $status | grep -oP ', \K(.*)(?=%)')
 charging=$(echo $status | grep -q Charg && echo "")
 
