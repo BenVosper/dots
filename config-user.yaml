@@ -74,6 +74,16 @@ dotfiles:
   f_linopenrc:
     src: linopenrc
     dst: ~/.linopenrc
+  f_config:
+    src: config/i3/config
+    dst: ~/.config/i3/config
+  f_polybar_config:
+    src: config/polybar/config
+    dst: ~/.config/polybar/config
+  f_launch-polybar:
+    src: scripts/launch-polybar
+    dst: ~/scripts/launch-polybar
+    chmod: '755'
 profiles:
   omega:
     dotfiles:
@@ -95,3 +105,6 @@ profiles:
     - f_picom.conf
     - d_alacritty
     - f_linopenrc
+    - f_config
+    - f_polybar_config
+    - f_launch-polybar
