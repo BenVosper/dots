@@ -72,8 +72,8 @@ dotfiles:
     src: config/i3/config
     dst: ~/.config/i3/config
   f_polybar_config:
-    src: config/polybar/config
-    dst: ~/.config/polybar/config
+    src: config/polybar/config.ini
+    dst: ~/.config/polybar/config.ini
   f_launch-polybar:
     src: scripts/launch-polybar
     dst: ~/scripts/launch-polybar
