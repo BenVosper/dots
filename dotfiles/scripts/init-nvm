@@ -1,0 +1,3 @@
+#!/bin/bash
+unset npm_config_prefix
+source /usr/share/nvm/init-nvm.sh
