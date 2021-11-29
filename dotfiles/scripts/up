@@ -4,11 +4,8 @@ term () {
     i3-msg exec "termite -e /bin/bash"
 }
 
-cm
-sleep 1
-
 i3-msg workspace "1"
-i3-msg exec "spotify --force-device-scale-factor=1.75 %U"
+i3-msg exec "/bin/bash -c '/opt/wavebox.io/wavebox/wavebox-launcher '"
 sleep 5
 
 i3-msg workspace "2"
@@ -36,10 +33,11 @@ sleep 1
 i3-msg exec pycharm
 sleep 10
 
-i3-msg workspace "1"
-sleep 1
-i3-msg focus left
-sleep 1
+i3-msg exec pcmanfm
+sleep 0.5
 i3-msg move scratchpad
-clear
-archey3
+sleep 0.5
+term
+sleep 0.5
+i3-msg move scratchpad
+i3-msg workspace "1"

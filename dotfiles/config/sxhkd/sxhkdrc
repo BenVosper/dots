@@ -98,7 +98,10 @@ alt + shift + minus
     i3-msg move scratchpad
 
 alt + minus
-    i3-msg scratchpad show
+    i3-msg [class="Alacritty"] scratchpad show
+
+alt + equal
+    i3-msg [class="Pcmanfm"] scratchpad show
 
 alt + Tab
     i3-msg workspace next_on_output
