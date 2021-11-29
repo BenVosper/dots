@@ -4,9 +4,6 @@ term () {
     i3-msg exec "termite -e /bin/bash"
 }
 
-cm
-sleep 1
-
 i3-msg workspace "1"
 i3-msg exec "spotify --force-device-scale-factor=1.75 %U"
 sleep 5
@@ -36,9 +33,13 @@ sleep 1
 i3-msg exec pycharm
 sleep 10
 
-i3-msg workspace "1"
-i3-msg [con_mark="$SCRATCH_MARK"] focus
-sleep 1
+i3-msg exec pcmanfm
+sleep 0.5
 i3-msg move scratchpad
-clear
+sleep 0.5
+term
+sleep 1
 archey3
+sleep 0.5
+i3-msg move scratchpad
+i3-msg workspace "1"
