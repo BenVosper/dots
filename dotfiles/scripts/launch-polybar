@@ -10,6 +10,9 @@
   outputs=$(echo "$xrandr_out" | grep " connected" | cut -d" " -f1)
   tray_output=$(echo "$xrandr_out" | grep " connected primary" | cut -d" " -f1)
 
+  export WLAN_INTERFACE="wlp3s0"
+  export ETH_INTERFACE="enp0s31f6"
+
   for m in $outputs; do
     export MONITOR=$m
     export TRAY_POSITION=none

@@ -34,7 +34,7 @@ alt + grave
     new-workspace
 
 alt + shift + w
-    wal -i ~/images && for i in 10 11 12 13 14 15 16 17; do pkill -SIGRTMIN+$i i3blocks; done
+    wal -i ~/images && ~/scripts/launch-polybar 
 
 ########################################## AUDIO ########################################
 
