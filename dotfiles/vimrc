@@ -25,6 +25,9 @@ set mouse=a
 " For alacritty compatibility
 set ttymouse=sgr
 
+set scrolloff=8
+set sidescrolloff=8
+
 " Move lines
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
