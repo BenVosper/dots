@@ -74,10 +74,6 @@ dotfiles:
   f_polybar_config:
     src: config/polybar/config.ini
     dst: ~/.config/polybar/config.ini
-  f_launch-polybar:
-    src: scripts/launch-polybar
-    dst: ~/scripts/launch-polybar
-    chmod: '755'
 profiles:
   beta:
     dotfiles:
@@ -100,4 +96,3 @@ profiles:
     - f_linopenrc
     - f_config
     - f_polybar_config
-    - f_launch-polybar
