@@ -11,6 +11,8 @@
   tray_output=$(echo "$xrandr_out" | grep " connected primary" | cut -d" " -f1)
 
   export WLAN_INTERFACE="wlp2s0"
+  export BATTERY_NAME="BAT0"
+  export AC_ADAPTER_NAME="AC"
 
   for m in $outputs; do
     export MONITOR=$m
