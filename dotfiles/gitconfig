@@ -13,21 +13,26 @@
 	psuo = !git push --set-upstream origin "$(git cb)"           # Push this branch to remote
 	st = status
 	com = checkout master
+        cod = "!(git checkout $(git gdb))"
 	co = checkout
 	comp = "!(git checkout master; git pull)"                    # Checkout master then pull
+        codp = "!(git checkout $(git gdb); git pull)" 
 	cb = rev-parse --abbrev-ref HEAD                             # "Current Branch"
 	nb = "!f() { git checkout -b $1;  }; f"                      # "New Branch"
-	fresh = "!git checkout master; git pull; git nb $1"          # "Fresh" branch: pull master, then create new branch
+	fresh = "!git checkout $(git gdb); git pull; git nb $1"    # "Fresh" branch: pull master, then create new branch
 	logo = "!f() { git log --oneline -n $1;  }; f"               # 'git logo n' - Print last n commits in oneline format
 	rebh = "!f() { git rebase -i HEAD~$1; }; f"                  # 'git rebh n' - Interactive rebase with last n commits
 	reba = rebase --abort
 	rebc = rebase --continue
 	ufm = "!git fetch origin master:master; git rebase master"                 # Pull master then rebase current branch
-	ufmp = "!git fetch origin master:master; git rebase master; git fpush"     # As above, then push with --force
-	pop = reset HEAD~1                                                         # Reset last commit
+        ufd = "!git fetch origin $(git gdb):$(git gdb); git rebase $(git gdb)"  
+	ufmp = "!git ufm; git fpush"                                               # As above, then push with --force
+	ufdp = "!git ufd; git fpush"  
+        pop = reset HEAD~1                                                         # Reset last commit
 	wang = "!(git commit -a --amend --no-edit; git fpush)"                     # Quickly amend and push last commit
         hardr = !git reset --hard origin/"$(git cb)"                               # Hard reset current branch
         cp = cherry-pick
+        gdb = "!(git rev-parse --abbrev-ref origin/HEAD | cut -d'/' -f2)"
 [commit]
 	gpgSign = true
 [rebase]
@@ -36,3 +41,5 @@
 	templatedir = ~/.git-templates
 [pull]
 	rebase = true
+[merge]
+	conflictStyle = zdiff3
