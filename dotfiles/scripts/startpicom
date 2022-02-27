@@ -3,4 +3,4 @@ PID=$(pidof picom)
 if [ ! -z "$PID" ] ; then
    kill -9 "$PID"
 fi
-picom -b -C --experimental-backends 
+picom -b --experimental-backends 
