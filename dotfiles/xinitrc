@@ -56,6 +56,9 @@ sxhkd &
 startpicom
 i3altlayout &
 
+xrandr --output DP-0 --mode 2560x1440 -r 165 --preferred
+
 # Go
 exec i3
+
 
