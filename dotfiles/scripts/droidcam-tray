@@ -1,0 +1,2 @@
+#!/bin/sh
+pkill -15 -f droidcam_cli_with_tray_icon.py || python /home/benv/code/scripts/droidcam/droidcam_cli_with_tray_icon.py adb 4747
