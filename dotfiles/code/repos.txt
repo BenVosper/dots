@@ -1,0 +1,33 @@
+# Repo URL                                                # Clone directory          # venv name          # Python Version
+git@github.com:unmadeworks/print-service.git              print-service              print                3.9
+git@github.com:unmadeworks/factory.git                    factory                    factory              3.9
+git@github.com:unmadeworks/embed-service.git              embed-service              embed                3.9
+git@github.com:unmadeworks/unmade-svg-utils.git           unmade-svg-utils           svg                  3.9
+git@github.com:unmadeworks/unmade-django-celery-utils.git unmade-django-celery-utils udc                  3.9
+git@github.com:unmadeworks/svg-rinse.git                  svg-rinse
+git@github.com:unmadeworks/skyknit.git                    skyknit                    skyknit              3.9
+git@github.com:unmadeworks/cloudknit.git                  cloudknit                  cloudknit            3.9
+git@github.com:unmadeworks/svg-outline-text-service.git   svg-outline-text-service
+git@github.com:unmadeworks/shipping-service.git           shipping-service           shipping             3.9
+git@github.com:unmadeworks/load-testing.git               load-testing               load-testing         3.9
+git@github.com:unmadeworks/fabrik.git                     fabrik                     fabrik               3.9
+git@github.com:unmadeworks/unauth.git                     unauth                     unauth               3.9
+git@github.com:unmadeworks/editor-service.git             editor-service:
+git@github.com:unmadeworks/svg2pdf.git                    svg2pdf
+git@github.com:unmadeworks/pdf-service.git                pdf-service
+git@github.com:unmadeworks/www.unmade.com.git             www.unmade.com
+git@github.com:unmadeworks/editors-v2.git                 editors-v2
+git@github.com:unmadeworks/universal-ui.git               uui
+git@github.com:unmadeworks/napapijri-commercial-ui.git    napapijri-commercial-ui
+git@github.com:unmadeworks/editors-ui.git                 editors-ui
+git@github.com:unmadeworks/garfield.git                   garfield
+git@github.com:unmadeworks/embellishment-service.git      embellishment-service      e11t-service         3.9
+git@github.com:unmadeworks/docker-base.git                docker-base
+git@github.com:unmadeworks/knitpreview.git                knitpreview
+git@github.com:unmadeworks/rapha-ui.git                   rapha-ui
+git@github.com:unmadeworks/ralphlauren-ui.git             ralphlauren-ui
+git@github.com:unmadeworks/data_uri_parser.git            data-uri-parser            data-uri             3.9
+git@github.com:unmadeworks/inkscape-service.git           inkscape-service           inkscape-service     3.9
+git@github.com:unmadeworks/python_lambda_example.git      python-lambda-example      ple                  3.8
+git@github.com:unmadeworks/endless.git                    endless                    endless              3.9
+git@github.com:unmadeworks/unmadeworks.github.io.git      unmadeworks               
