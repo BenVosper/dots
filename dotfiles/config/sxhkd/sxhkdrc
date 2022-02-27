@@ -24,6 +24,9 @@ alt + F6
 alt + F7
     sleep 0.2; maim -slB -c 0,0,0,0.6 -b 0 /home/benv/screenshots/$(date +%F_%T).png
 
+alt + F8
+    droidcam-tray
+
 alt + F12
     i3-nagbar -t warning -m 'Shutdown?' -B 'Yes, shutdown' 'shutdown now'
 
