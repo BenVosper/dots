@@ -80,6 +80,9 @@ dotfiles:
   f_polybar_config:
     src: config/polybar/config.ini
     dst: ~/.config/polybar/config.ini
+  f_repos.txt:
+    src: code/repos.txt
+    dst: ~/code/repos.txt
 profiles:
   delta:
     dotfiles:
@@ -103,3 +106,4 @@ profiles:
     - f_linopenrc
     - f_config
     - f_polybar_config
+    - f_repos.txt
