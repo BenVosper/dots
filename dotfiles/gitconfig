@@ -39,6 +39,7 @@
 	autosquash = true
 [init]
 	templatedir = ~/.git-templates
+	defaultBranch = main
 [pull]
 	rebase = true
 [merge]
