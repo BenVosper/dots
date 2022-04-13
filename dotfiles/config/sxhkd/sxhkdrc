@@ -39,6 +39,12 @@ alt + grave
 alt + shift + w
     wal -i ~/images && ~/scripts/launch-polybar 
 
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
 ########################################## AUDIO ########################################
 
 XF86Audio{Raise,Lower}Volume
