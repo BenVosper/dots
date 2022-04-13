@@ -28,4 +28,5 @@ bindsym $mod+Shift+Tab workspace prev  # !!! Don't remove! Breaks config for som
 
 new_window 1pixel
 
+exec_always --no-startup-id /usr/bin/alternating_layouts.py
 exec_always --no-startup-id $HOME/scripts/launch-polybar
