@@ -28,6 +28,8 @@ git@github.com:unmadeworks/rapha-ui.git                   rapha-ui
 git@github.com:unmadeworks/ralphlauren-ui.git             ralphlauren-ui
 git@github.com:unmadeworks/data_uri_parser.git            data-uri-parser            data-uri             3.9
 git@github.com:unmadeworks/inkscape-service.git           inkscape-service           inkscape-service     3.9
-git@github.com:unmadeworks/python_lambda_example.git      python-lambda-example      ple                  3.8
+git@github.com:unmadeworks/python_lambda_example.git      python-lambda-example      ple                  3.9
 git@github.com:unmadeworks/endless.git                    endless                    endless              3.9
 git@github.com:unmadeworks/unmadeworks.github.io.git      unmadeworks               
+git@github.com:unmadeworks/statman.git                    statman                    statman              3.9
+git@github.com:unmadeworks/circleci-workflow-tracker.git  circleci-workflow-tracker  cwt                  3.9
