@@ -1,0 +1,5 @@
+#!/bin/sh
+
+OUTPUT_PATH=${1:-"$(date +%F_%T).mp3"}
+INPUT="$(pacmd list-sources | egrep '^\s+name: .*alsa_' | awk -F"<|>" '{print $2}' | dmenu -p 'Select input to record:')"
+parec -v --channels=1 -d "$INPUT" | lame  -r -m m --preset standard - "$OUTPUT_PATH"
