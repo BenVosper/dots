@@ -81,7 +81,7 @@ dotfiles:
     src: config/polybar/config.ini
     dst: ~/.config/polybar/config.ini
 profiles:
-  omega:
+  delta:
     dotfiles:
     - f_bashrc
     - f_bash_profile

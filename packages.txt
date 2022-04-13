@@ -13,13 +13,12 @@ dotdrop
 feh
 figlet
 firefox
-flameshot-git
 gdmap
 gifski
 htop
 i7z
 ipython
-j4-dmenu-desktop-git
+j4-dmenu-desktop
 maim
 man-db
 man-pages

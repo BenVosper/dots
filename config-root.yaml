@@ -26,9 +26,6 @@ dotfiles:
   f_sxlock.service:
     src: etc/systemd/system/sxlock.service
     dst: /etc/systemd/system/sxlock.service
-  d_rules.d:
-    src: etc/udev/rules.d
-    dst: /etc/udev/rules.d
   f_70-synaptics.conf:
     dst: /etc/X11/xorg.conf.d/70-synaptics.conf
     src: etc/X11/xorg.conf.d/70-synaptics.conf
@@ -37,7 +34,7 @@ dotfiles:
     dst: /etc/X11/xorg.conf.d/00-keyboard.conf
 
 profiles:
-  omega:
+  delta:
     dotfiles:
     - f_local.conf
     - f_user-dirs.defaults
