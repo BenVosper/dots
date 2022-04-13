@@ -76,8 +76,11 @@ alt + { h, v }
 alt + f
     i3-msg fullscreen toggle
 
-alt + shift + space
+alt + g
     i3-msg floating toggle
+
+alt + shift + g
+    i3-msg focus mode_toggle
 
 alt + { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }
     i3-msg workspace { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
