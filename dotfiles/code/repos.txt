@@ -33,3 +33,4 @@ git@github.com:unmadeworks/endless.git                    endless               
 git@github.com:unmadeworks/unmadeworks.github.io.git      unmadeworks               
 git@github.com:unmadeworks/statman.git                    statman                    statman              3.9
 git@github.com:unmadeworks/circleci-workflow-tracker.git  circleci-workflow-tracker  cwt                  3.9
+git@github.com:unmadeworks/simple-django-app.git          simple-django-app          sja                  3.9
