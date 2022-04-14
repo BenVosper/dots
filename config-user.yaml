@@ -47,9 +47,6 @@ dotfiles:
   d_i3:
     src: config/i3
     dst: ~/.config/i3
-  d_ranger:
-    src: config/ranger
-    dst: ~/.config/ranger
   f_npmrc:
     src: npmrc
     dst: ~/.npmrc
@@ -97,7 +94,6 @@ profiles:
     - d_sxhkd
     - d_scripts
     - d_i3
-    - d_ranger
     - f_npmrc
     - f_spotify.desktop
     - d_i3blocks
