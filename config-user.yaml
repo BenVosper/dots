@@ -107,3 +107,5 @@ profiles:
     - f_config
     - f_polybar_config
     - f_repos.txt
+    - d_gtk-3.0
+    - f_gtkrc-2.0
