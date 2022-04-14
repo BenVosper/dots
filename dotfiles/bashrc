@@ -27,7 +27,7 @@ GREY="\[$(tput setaf 238)\]"
 RESET="\[$(tput sgr0)\]"
 GIT='$(__git_ps1 " (%s)")'
 
-PS1="${BOLD}${THEMECOL1}\u ${THEMECOL2}\W${THEMECOL3}${GIT}\n${GREY}Ω ${RESET}"
+PS1="${BOLD}${THEMECOL1}\u ${THEMECOL2}\W${THEMECOL3}${GIT}\n${GREY}Δ ${RESET}"
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
