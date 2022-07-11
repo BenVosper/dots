@@ -83,25 +83,4 @@ dotfiles:
 profiles:
   delta:
     dotfiles:
-    - f_bashrc
-    - f_bash_profile
-    - f_vimrc
-    - f_xinitrc
-    - f_xresources
-    - d_git-templates
-    - f_gitconfig
-    - f_archey3.cfg
-    - d_sxhkd
-    - d_scripts
-    - d_i3
-    - f_npmrc
-    - f_spotify.desktop
-    - d_i3blocks
-    - f_picom.conf
-    - d_alacritty
-    - f_linopenrc
-    - f_config
-    - f_polybar_config
-    - f_repos.txt
-    - d_gtk-3.0
-    - f_gtkrc-2.0
+    - ALL

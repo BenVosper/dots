@@ -36,11 +36,4 @@ dotfiles:
 profiles:
   delta:
     dotfiles:
-    - f_local.conf
-    - f_user-dirs.defaults
-    - f_vconsole.conf
-    - f_override.conf
-    - f_sxlock.service
-    - f_70-synaptics.conf
-    - f_00-keyboard.conf
-
+      -ALL
