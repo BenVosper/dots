@@ -77,6 +77,9 @@ dotfiles:
   f_repos.txt:
     src: code/repos.txt
     dst: ~/code/repos.txt
+  f_flameshot.ini:
+    src: config/flameshot/flameshot.ini
+    dst: ~/.config/flameshot/flameshot.ini
 profiles:
   beta:
     dotfiles:
@@ -100,3 +103,4 @@ profiles:
     - f_config
     - f_polybar_config
     - f_repos.txt
+    - f_flameshot.ini
