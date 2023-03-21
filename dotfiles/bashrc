@@ -40,3 +40,5 @@ source ~/.cache/wal/colors-tty.sh
 # Set cursor to steady bar
 echo -e "\033[6 q"
 
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
