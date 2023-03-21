@@ -1,0 +1,6 @@
+#!/bin/sh
+PID=$(pidof xautolock)
+if [ ! -z "$PID" ] ; then
+   kill -9 "$PID"
+fi
+xautolock -time 2 -corners "----" -cornersize 50 -locker lock &

@@ -46,13 +46,11 @@ eval $(ssh-agent)
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
-# Start 'xautolock'. Lock screen after 5 minutes unless mouse is within 50px of any corner
-xautolock -time 2 -corners "----" -cornersize 50 -locker lock &
-
 # Reset touchscreen output
 xinput --map-to-output 'ELAN Touchscreen' eDP1
 
 # Start daemons
+start-xautolock
 sxhkd &
 startpicom
 i3altlayout &

@@ -80,7 +80,12 @@ dotfiles:
   f_repos.txt:
     src: code/repos.txt
     dst: ~/code/repos.txt
+  f_start-xautolock:
+    src: scripts/start-xautolock
+    dst: ~/scripts/start-xautolock
+    chmod: '755'
 profiles:
   delta:
     dotfiles:
     - ALL
+    - f_start-xautolock
