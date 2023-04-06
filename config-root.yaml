@@ -20,9 +20,9 @@ dotfiles:
   f_vconsole.conf:
     dst: /etc/vconsole.conf
     src: etc/vconsole.conf
-  f_override.conf:
-    src: etc/systemd/system/docker.service.d/override.conf
-    dst: /etc/systemd/system/docker.service.d/override.conf
+  f_daemon.json:
+    src: etc/docker/daemon.json
+    dst: /etc/docker/daemon.json
   f_sxlock.service:
     src: etc/systemd/system/sxlock.service
     dst: /etc/systemd/system/sxlock.service
