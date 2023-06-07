@@ -33,3 +33,4 @@ git@github.com:unmadeworks/apm-fe.git                              apm-fe
 git@github.com:BenVosper/scripts.git                               scripts
 git@github.com:BenVosper/dots.git                                  dots
 git@github.com:unmadeworks/way-we-work.git                         way-we-work
+git@github.com:unmadeworks/unmade-identity.git                     unmade-identity                     identity             3.9
