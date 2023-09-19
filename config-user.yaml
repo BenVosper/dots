@@ -80,6 +80,9 @@ dotfiles:
   f_flameshot.ini:
     src: config/flameshot/flameshot.ini
     dst: ~/.config/flameshot/flameshot.ini
+  f_inputrc:
+    src: inputrc
+    dst: ~/.inputrc
 profiles:
   beta:
     dotfiles:
@@ -104,3 +107,4 @@ profiles:
     - f_polybar_config
     - f_repos.txt
     - f_flameshot.ini
+    - f_inputrc
