@@ -33,6 +33,11 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+" Control backspace word delete
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+set backspace=indent,eol,start
+
 au FileType gitcommit setlocal tw=72
 au FileType *.md setlocal tw=80
 
