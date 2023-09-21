@@ -84,8 +84,10 @@ dotfiles:
     src: scripts/start-xautolock
     dst: ~/scripts/start-xautolock
     chmod: '755'
+  f_inputrc:
+    src: inputrc
+    dst: ~/.inputrc
 profiles:
   delta:
     dotfiles:
     - ALL
-    - f_start-xautolock
