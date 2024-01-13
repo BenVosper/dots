@@ -17,12 +17,6 @@ dotfiles:
   d_scripts:
     dst: ~/scripts
     src: scripts
-  d_sxhkd:
-    dst: ~/.config/sxhkd
-    src: config/sxhkd
-  f_archey3.cfg:
-    dst: ~/.archey3.cfg
-    src: archey3.cfg
   f_bash_profile:
     dst: ~/.bash_profile
     src: bash_profile
@@ -35,76 +29,32 @@ dotfiles:
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
-  f_xinitrc:
-    dst: ~/.xinitrc
-    src: xinitrc
-  f_xresources:
-    dst: ~/.Xresources
-    src: Xresources
-  d_i3:
-    src: config/i3
-    dst: ~/.config/i3
   f_npmrc:
     src: npmrc
     dst: ~/.npmrc
-  f_spotify.desktop:
-    src: local/share/applications/spotify.desktop
-    dst: ~/.local/share/applications/spotify.desktop
-  d_i3blocks:
-    src: config/i3blocks
-    dst: ~/.config/i3blocks
   d_gtk-3.0:
     src: config/gtk-3.0
     dst: ~/.config/gtk-3.0
   f_gtkrc-2.0:
     src: gtkrc-2.0
     dst: ~/.gtkrc-2.0
-  f_picom.conf:
-    src: config/picom/picom.conf
-    dst: ~/.config/picom/picom.conf
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
-  f_linopenrc:
-    src: linopenrc
-    dst: ~/.linopenrc
-  f_config:
-    src: config/i3/config
-    dst: ~/.config/i3/config
-  f_polybar_config:
-    src: config/polybar/config.ini
-    dst: ~/.config/polybar/config.ini
-  f_repos.txt:
-    src: code/repos.txt
-    dst: ~/code/repos.txt
-  f_flameshot.ini:
-    src: config/flameshot/flameshot.ini
-    dst: ~/.config/flameshot/flameshot.ini
   f_inputrc:
     src: inputrc
     dst: ~/.inputrc
 profiles:
-  beta:
+  mu:
     dotfiles:
     - f_bashrc
     - f_bash_profile
     - f_vimrc
-    - f_xinitrc
-    - f_xresources
     - d_git-templates
     - f_gitconfig
-    - f_archey3.cfg
-    - d_sxhkd
     - d_scripts
-    - d_i3
     - f_npmrc
-    - f_spotify.desktop
-    - d_i3blocks
-    - f_picom.conf
     - d_alacritty
-    - f_linopenrc
-    - f_config
-    - f_polybar_config
-    - f_repos.txt
-    - f_flameshot.ini
     - f_inputrc
+    - d_gtk-3.0
+    - f_gtkrc-2.0
