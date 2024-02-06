@@ -50,6 +50,9 @@ dotfiles:
   f_config:
     src: config/sway/config
     dst: ~/.config/sway/config
+  d_waybar:
+    src: config/waybar
+    dst: ~/.config/waybar
 profiles:
   mu:
     dotfiles:

@@ -1,0 +1,51 @@
+@import url("../../.cache/wal/colors-custom-gtk3.css");
+
+* {
+    font-family: monospace;
+    font-size: medium;
+    min-height: 0;
+}
+window#waybar {
+    background: transparent;
+    color: #DDDDDD;
+}
+
+window > box {
+    margin: 0px;
+    padding: 3px;
+    background: @background;
+}
+
+#workspaces button {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: #DDDDDD;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+#workspaces button.focused {
+    border-bottom: 3px solid @color1;
+}
+#custom-media, #pulseaudio, #network, #cpu, #memory, #temperature, #backlight, #battery, #clock, #scratchpad{
+    padding: 0;
+    margin-right: 15px;
+    background: transparent;
+    background-color: transparent;
+    color: @color1;
+}
+
+#idle_inhibitor {
+    margin-right: 5px;
+    color: @color1;
+}
+#tray {
+    margin-right: 5px;
+}
+
+#battery.icon {
+    color: @color1;
+}
