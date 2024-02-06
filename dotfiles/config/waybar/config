@@ -1,0 +1,92 @@
+{
+     "position": "bottom", // Waybar position (top|bottom|left|right)
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["sway/workspaces", "sway/scratchpad"],
+    "modules-center": ["custom/media"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "idle_inhibitor", "tray"],
+    "fixed-center": false,
+    "sway/scratchpad": {
+        "format": "{icon} <span fgcolor=\"#DDDDDD\">{count}</span>",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " <span fgcolor=\"#DDDDDD\">{:%H:%M}</span>",
+        "format-alt": " <span fgcolor=\"#DDDDDD\">{:%A %d %B %Y}</span>"
+    },
+    "cpu": {
+        "format": " <span fgcolor=\"#DDDDDD\">{usage}%</span>",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " <span fgcolor=\"#DDDDDD\">{}%</span>"
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "critical-threshold": 80,
+        "format": "{icon} <span fgcolor=\"#DDDDDD\">{temperatureC}°C</span>",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        "format": " <span fgcolor=\"#DDDDDD\">{percent}%</span>",
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} <span fgcolor=\"#DDDDDD\">{capacity}%</span>",
+        "format-charging": " <span fgcolor=\"#DDDDDD\">{capacity}%</span>",
+        "format-plugged": " <span fgcolor=\"#DDDDDD\">{capacity}%</span>",
+        "format-alt": "{icon} <span fgcolor=\"#DDDDDD\">{time}</span>",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": " <span fgcolor=\"#DDDDDD\">{essid}</span>",
+        "format-ethernet": " <span fgcolor=\"#DDDDDD\">{ipaddr}/{cidr}</span>",
+        "tooltip-format": " {ifname} via {gwaddr} ",
+        "format-linked": " <span fgcolor=\"#DDDDDD\">{ifname} (No IP)</span>",
+        "format-disconnected": "⚠ <span fgcolor=\"#DDDDDD\">Disconnected</span>",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{icon} <span fgcolor=\"#DDDDDD\">{volume}%</span>",
+        "format-bluetooth": "{icon} <span fgcolor=\"#DDDDDD\">{volume}%</span>",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": " <span fgcolor=\"#DDDDDD\">{format_source}</span>",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+    "format": "{}",
+    "escape": false,
+    "return-type": "json",
+    "max-length": 80,
+    "on-click": "playerctl play-pause",
+    "exec": "python $HOME/scripts/waybar/mediaplayer.py 2> /dev/null",
+}
+}
+
