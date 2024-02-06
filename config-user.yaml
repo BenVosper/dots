@@ -47,6 +47,9 @@ dotfiles:
   f_spotify-flags.conf:
     src: config/spotify-flags.conf
     dst: ~/.config/spotify-flags.conf
+  f_config:
+    src: config/sway/config
+    dst: ~/.config/sway/config
 profiles:
   mu:
     dotfiles:
