@@ -53,6 +53,9 @@ dotfiles:
   d_waybar:
     src: config/waybar
     dst: ~/.config/waybar
+  d_templates:
+    src: config/wal/templates
+    dst: ~/.config/wal/templates
 profiles:
   mu:
     dotfiles:
