@@ -22,14 +22,10 @@ grim
 gst-plugin-pipewire
 gtk4
 htop
-intel-gpu-tools
-intel-media-driver
-intel-ucode
 iwd
 j4-dmenu-desktop
 jq
 keepassxc
-libfprint-2-tod1-xps9300-bin
 libva-utils
 linux
 linux-firmware
@@ -49,7 +45,7 @@ pcmanfm
 pipewire-alsa
 pipewire-pulse
 pycharm-professional
-python39
+python310
 python-i3ipc
 python-pip
 python-pywal
@@ -67,7 +63,6 @@ unzip
 usbutils
 vdpauinfo
 vim
-vulkan-intel
 wavebox
 waybar
 wireless_tools
