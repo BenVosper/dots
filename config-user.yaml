@@ -44,7 +44,10 @@ dotfiles:
   f_inputrc:
     src: inputrc
     dst: ~/.inputrc
+  f_spotify-flags.conf:
+    src: config/spotify-flags.conf
+    dst: ~/.config/spotify-flags.conf
 profiles:
   mu:
     dotfiles:
-      - ALL
+    - ALL
