@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+source ~/.cache/wal/colors.sh
+/usr/bin/env bemenu -i -c -l 10 --fixed-height -W 0.5 -H 30 -B 3 -R 5 -s \
+   --nf "$color1" --ff "$color1" --tf "$color1" --hf "$color0"  --bdr "$color1" \
+   --nb "$color0"CC --sb "$color0"CC --tb "$color0"CC --fb "$color0"CC --ab "$color0"CC --hb "$color1"CC \
+   "$@"

@@ -7,9 +7,13 @@ source ~/.secrets.sh
 export EDITOR="vim"
 export BROWSER="firefox"
 export VENV_DIR="/home/benv/.venv"
+export PATH="$HOME/scripts:$HOME/.local/bin:$PATH"
+export MOZ_ENABLE_WAYLAND=1
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
+if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec sway
 fi

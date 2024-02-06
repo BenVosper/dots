@@ -11,10 +11,6 @@ alias g='git'
 alias v='vim'
 alias nnn='nnn -c'
 
-export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
-
-
-
 source /usr/share/git/completion/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
@@ -27,7 +23,7 @@ GREY="\[$(tput setaf 238)\]"
 RESET="\[$(tput sgr0)\]"
 GIT='$(__git_ps1 " (%s)")'
 
-PS1="${BOLD}${THEMECOL1}\u ${THEMECOL2}\W${THEMECOL3}${GIT}\n${GREY}β${RESET} "
+PS1="${BOLD}${THEMECOL1}\u ${THEMECOL2}\W${THEMECOL3}${GIT}\n${GREY}μ${RESET} "
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
@@ -42,3 +38,10 @@ echo -e "\033[6 q"
 
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi

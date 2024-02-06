@@ -23,13 +23,7 @@ dotfiles:
   f_daemon.json:
     src: etc/docker/daemon.json
     dst: /etc/docker/daemon.json
-  f_sxlock.service:
-    src: etc/systemd/system/sxlock.service
-    dst: /etc/systemd/system/sxlock.service
-  f_00-keyboard.conf:
-    src: etc/X11/xorg.conf.d/00-keyboard.conf
-    dst: /etc/X11/xorg.conf.d/00-keyboard.conf
 profiles:
-  beta:
+  mu:
     dotfiles:
     - ALL

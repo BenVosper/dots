@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+/usr/bin/env pkill bemenu
+/usr/bin/env j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | ~/scripts/bemenu-styled -p 'Run:'"

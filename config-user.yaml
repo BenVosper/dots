@@ -47,14 +47,4 @@ dotfiles:
 profiles:
   mu:
     dotfiles:
-    - f_bashrc
-    - f_bash_profile
-    - f_vimrc
-    - d_git-templates
-    - f_gitconfig
-    - d_scripts
-    - f_npmrc
-    - d_alacritty
-    - f_inputrc
-    - d_gtk-3.0
-    - f_gtkrc-2.0
+      - ALL
