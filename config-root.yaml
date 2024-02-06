@@ -24,6 +24,6 @@ dotfiles:
     src: etc/docker/daemon.json
     dst: /etc/docker/daemon.json
 profiles:
-  mu:
+  sigma:
     dotfiles:
     - ALL
