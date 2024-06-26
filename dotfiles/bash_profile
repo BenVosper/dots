@@ -7,6 +7,8 @@ source ~/.secrets.sh
 export EDITOR="vim"
 export BROWSER="firefox"
 export VENV_DIR="/home/benv/.venv"
+export BATTERY_NAME="BAT0"
+export AC_ADAPTER_NAME="AC"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
