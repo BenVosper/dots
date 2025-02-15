@@ -11,6 +11,7 @@ alias g='git'
 alias v='vim'
 alias nnn='nnn -c'
 
+source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
@@ -23,7 +24,7 @@ GREY="\[$(tput setaf 238)\]"
 RESET="\[$(tput sgr0)\]"
 GIT='$(__git_ps1 " (%s)")'
 
-PS1="${BOLD}${THEMECOL1}\u ${THEMECOL2}\W${THEMECOL3}${GIT}\n${GREY}μ${RESET} "
+PS1="${BOLD}${THEMECOL1}\u ${THEMECOL2}\W${THEMECOL3}${GIT}\n${GREY}Σ${RESET} "
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
