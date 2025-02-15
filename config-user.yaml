@@ -62,6 +62,10 @@ dotfiles:
   d_swappy:
     src: config/swappy
     dst: ~/.config/swappy
+  f_wavebox.desktop:
+    src: local/share/applications/wavebox.desktop
+    dst: ~/.local/share/applications/wavebox.desktop
+    chmod: '755'
 profiles:
   sigma:
     dotfiles:

@@ -1,0 +1,21 @@
+[Desktop Entry]
+Version=1.0
+Name=Wavebox
+GenericName=Web Browser
+Comment=The next generation of web-desktop communication
+Exec=/opt/wavebox.io/wavebox/wavebox-launcher --ozone-platform-hint=auto %U
+StartupNotify=true
+Terminal=false
+Icon=wavebox
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/ftp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
+Actions=new-window;new-private-window;
+
+[Desktop Action new-window]
+Name=New Window
+Exec=/opt/wavebox.io/wavebox/wavebox-launcher --ozone-platform-hint=auto
+
+[Desktop Action new-private-window]
+Name=New Incognito Window
+Exec=/opt/wavebox.io/wavebox/wavebox-launcher --ozone-platform-hint=auto --incognito
