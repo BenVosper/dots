@@ -3,7 +3,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["sway/workspaces", "sway/scratchpad"],
     "modules-center": ["custom/media"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "idle_inhibitor", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock#date", "clock", "idle_inhibitor", "tray"],
     "fixed-center": false,
     "sway/scratchpad": {
         "format": "{icon} <span fgcolor=\"#DDDDDD\">{count}</span>",
@@ -23,19 +23,22 @@
         "spacing": 10
     },
     "clock": {
+        "format": " <span fgcolor=\"#DDDDDD\">{:%H:%M}</span>"
+    },
+    "clock#date": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " <span fgcolor=\"#DDDDDD\">{:%H:%M}</span>",
-        "format-alt": " <span fgcolor=\"#DDDDDD\">{:%A %d %B %Y}</span>"
+        "format": " <span fgcolor=\"#DDDDDD\">{:%d-%m-%y}</span>",
+        "format-alt": " <span fgcolor=\"#DDDDDD\">{:%A %d %B %Y}</span>"
     },
     "cpu": {
         "format": " <span fgcolor=\"#DDDDDD\">{usage}%</span>",
         "tooltip": false
     },
     "memory": {
-        "format": " <span fgcolor=\"#DDDDDD\">{}%</span>"
+        "format": " <span fgcolor=\"#DDDDDD\">{percentage}%</span>"
     },
     "temperature": {
-        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp3_input",
         "critical-threshold": 80,
         "format": "{icon} <span fgcolor=\"#DDDDDD\">{temperatureC}°C</span>",
         "format-icons": ["", "", ""]
@@ -58,11 +61,8 @@
     },
     "network": {
         "format-wifi": " <span fgcolor=\"#DDDDDD\">{essid}</span>",
-        "format-ethernet": " <span fgcolor=\"#DDDDDD\">{ipaddr}/{cidr}</span>",
-        "tooltip-format": " {ifname} via {gwaddr} ",
-        "format-linked": " <span fgcolor=\"#DDDDDD\">{ifname} (No IP)</span>",
-        "format-disconnected": "⚠ <span fgcolor=\"#DDDDDD\">Disconnected</span>",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-ethernet": "<span fgcolor=\"#DDDDDD\"></span>",
+        "format-disconnected": "⚠ <span fgcolor=\"#DDDDDD\">Disconnected</span>"
     },
     "pulseaudio": {
         "format": "{icon} <span fgcolor=\"#DDDDDD\">{volume}%</span>",
