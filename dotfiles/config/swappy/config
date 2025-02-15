@@ -1,0 +1,4 @@
+[Default]
+save_dir=$HOME/screenshots
+save_filename_format=%F_%T.png
+show_panel=true

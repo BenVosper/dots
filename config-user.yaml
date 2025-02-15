@@ -59,6 +59,9 @@ dotfiles:
   d_gtk-4.0:
     src: config/gtk-4.0
     dst: ~/.config/gtk-4.0
+  d_swappy:
+    src: config/swappy
+    dst: ~/.config/swappy
 profiles:
   sigma:
     dotfiles:
