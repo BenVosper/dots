@@ -56,6 +56,9 @@ dotfiles:
   d_templates:
     src: config/wal/templates
     dst: ~/.config/wal/templates
+  d_gtk-4.0:
+    src: config/gtk-4.0
+    dst: ~/.config/gtk-4.0
 profiles:
   sigma:
     dotfiles:
