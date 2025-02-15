@@ -11,6 +11,7 @@ import gi
 import json
 import os
 from typing import List
+import html
 
 logger = logging.getLogger(__name__)
 
@@ -63,12 +64,11 @@ class PlayerManager:
 
     def write_output(self, text, player):
         logger.debug(f"Writing output: {text}")
-
         output = {"text": text,
                   "class": "custom-" + player.props.player_name,
                   "alt": player.props.player_name}
 
-        sys.stdout.write(json.dumps(output) + "\n")
+        sys.stdout.write(json.dumps(output, ensure_ascii=False) + "\n")
         sys.stdout.flush()
 
     def clear_output(self):
@@ -102,7 +102,7 @@ class PlayerManager:
         current_player = self.get_first_playing_player()
         if current_player is not None:
             self.on_metadata_changed(current_player, current_player.props.metadata)
-        else:    
+        else:
             self.clear_output()
 
     def on_metadata_changed(self, player, metadata, _=None):
@@ -115,7 +115,7 @@ class PlayerManager:
         if player_name == "spotify" and "mpris:trackid" in metadata.keys() and ":ad:" in player.props.metadata["mpris:trackid"]:
             track_info = "Advertisement"
         elif artist is not None and title is not None:
-            track_info = f"<span fgcolor=\"#DDDDDD\">{artist} - <span style=\"italic\">{title}</span></span>"
+            track_info = f"<span fgcolor=\"#DDDDDD\">{html.escape(artist)} - <span style=\"italic\">{html.escape(title)}</span></span>"
         else:
             track_info = title
 
