@@ -66,6 +66,9 @@ dotfiles:
     src: local/share/applications/wavebox.desktop
     dst: ~/.local/share/applications/wavebox.desktop
     chmod: '755'
+  f_vim.desktop:
+    src: local/share/applications/vim.desktop
+    dst: ~/.local/share/applications/vim.desktop
 profiles:
   sigma:
     dotfiles:
