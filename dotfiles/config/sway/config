@@ -177,8 +177,10 @@ bar {
 }
 
 for_window [app_id="pcmanfm"] floating enable, resize set 60ppt 60ppt
+for_window [class="KeePassXC"] floating enable, resize set 60ppt 60ppt
 
 exec ~/scripts/alternating-layout.py
-exec keepassxc
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec pcmanfm --daemon-mode
+exec keepassxc --minimized
+exec nm-applet
