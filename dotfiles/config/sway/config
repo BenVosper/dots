@@ -144,6 +144,7 @@ bar {
 
 for_window [app_id="pcmanfm"] floating enable, resize set 60ppt 60ppt
 for_window [class="KeePassXC"] floating enable, resize set 60ppt 60ppt
+for_window [class="Pinentry-gtk"] floating enable
 
 exec ~/scripts/alternating-layout.py
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
