@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+timestamp="$(date '+%Y-%m-%d_%H:%M:%S')"
+
+raw_file="${timestamp}_raw.mp4"
+final_file="${timestamp}.mp4"
+
+wl-screenrec -g "$(slurp)" -f "$raw_file"
+
+ffmpeg -i "$raw_file" \
+  -vf "crop=trunc(iw/2)*2:trunc(ih/2)*2" \
+  -r 60 \
+  -c:v libx264 \
+  -crf 20 \
+  -preset veryslow \
+  "$final_file"
+
+rm "$raw_file"
+
+echo "Saved recording to: $final_file"

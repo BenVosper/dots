@@ -1,0 +1,2 @@
+#!/bin/sh
+scrcpy --video-source=camera --camera-id=1 --camera-size=1920x1080 --camera-fps=60 --video-bit-rate=100M  --v4l2-sink=/dev/video9 --no-playback --no-window
