@@ -1,0 +1,2 @@
+#!/bin/sh
+{ git diff --name-only --diff-filter=ACM -z -- '*.py'; git ls-files --others --exclude-standard -z -- '*.py'; } | xargs -0 black
