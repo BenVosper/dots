@@ -1,8 +1,8 @@
 [user]
 	name = BenVosper
 [user]
-	email = ben-vosper@hotmail.com
-	signingkey = A4B9F3629727B029
+	email = hi@benvosper.com
+	signingkey = 2260373CDA7F0271
 [core]
 	editor = vim
 
@@ -34,7 +34,7 @@
         cp = cherry-pick
         gdb = "!(git rev-parse --abbrev-ref origin/HEAD | cut -d'/' -f2)"
 [commit]
-	gpgSign = true
+	gpgsign = true
 [rebase]
 	autosquash = true
 [init]
@@ -44,3 +44,5 @@
 	rebase = true
 [merge]
 	conflictStyle = zdiff3
+[tag]
+	gpgsign = true
