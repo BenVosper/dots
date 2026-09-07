@@ -66,6 +66,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym Alt+Ctrl+Tab exec ~/scripts/play-pause-spotify-priority
 
 bindsym $mod+F7 exec grim -g "$(slurp)" - | swappy -f -
+bindsym $mod+Shift+F7 exec grim -g "$(slurp; sleep 5)" - | swappy -f -
 bindsym $mod+F8 exec ~/scripts/droidcam-tray
 
 bindsym $mod+Left focus left
