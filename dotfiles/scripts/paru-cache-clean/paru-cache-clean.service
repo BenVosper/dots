@@ -1,0 +1,6 @@
+[Unit]
+Description=Trim paru AUR build cache
+
+[Service]
+Type=oneshot
+ExecStart=%h/scripts/paru-cache-clean/paru-cache-clean
