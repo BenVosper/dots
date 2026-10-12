@@ -3,7 +3,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["sway/workspaces", "sway/scratchpad"],
     "modules-center": ["custom/media"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock#date", "clock", "idle_inhibitor", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "custom/disk", "backlight", "battery", "clock#date", "clock", "idle_inhibitor", "tray"],
     "fixed-center": false,
     "sway/scratchpad": {
         "format": "{icon} <span fgcolor=\"#DDDDDD\">{count}</span>",
@@ -42,6 +42,12 @@
         "critical-threshold": 80,
         "format": "{icon} <span fgcolor=\"#DDDDDD\">{temperatureC}°C</span>",
         "format-icons": ["", "", ""]
+    },
+    "custom/disk": {
+        "exec": "$HOME/scripts/waybar/disk.sh",
+        "return-type": "json",
+        "interval": 60,
+        "format": "\uf0a0 <span fgcolor=\"#DDDDDD\">{}</span>"
     },
     "backlight": {
         "format": " <span fgcolor=\"#DDDDDD\">{percent}%</span>",

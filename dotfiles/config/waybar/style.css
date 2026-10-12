@@ -30,7 +30,7 @@ window > box {
 #workspaces button.focused {
     border-bottom: 3px solid @color1;
 }
-#custom-media, #pulseaudio, #network, #cpu, #memory, #temperature, #backlight, #battery, #clock, #scratchpad{
+#custom-media, #pulseaudio, #network, #cpu, #memory, #temperature, #custom-disk, #backlight, #battery, #clock, #scratchpad{
     padding: 0;
     margin-right: 15px;
     background: transparent;
