@@ -1,0 +1,6 @@
+[Unit]
+Description=Prune unused docker containers, images, volumes and build cache
+
+[Service]
+Type=oneshot
+ExecStart=%h/scripts/docker-prune/docker-prune

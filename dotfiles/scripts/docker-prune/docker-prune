@@ -1,0 +1,46 @@
+#!/bin/bash
+# Prune docker state (except networks) that hasn't been used in $DAYS days (default 30).
+#
+# Docker's own `container prune --filter until=` goes by creation time, so a
+# long-lived container you stopped yesterday would be removed. Instead, remove
+# stopped containers by when they last *finished* running (or were created, if
+# never started). Everything else follows from that: images and volumes are
+# only removed once no container references them.
+#
+# Pass -n for a dry run (lists the containers that would be removed).
+
+set -euo pipefail
+
+days=${DAYS:-30}
+until="$((days * 24))h"
+cutoff=$(date -d "-$days days" +%s)
+dry_run=
+[ "${1:-}" = -n ] && dry_run=1
+
+stale=()
+while read -r id finished created name; do
+    [[ $finished == 0001-* ]] && finished=$created
+    if [ "$(date -d "$finished" +%s)" -lt "$cutoff" ]; then
+        echo "stale container: ${name#/} (last ran ${finished%%T*})"
+        stale+=("$id")
+    fi
+done < <(docker ps -aq --filter status=exited --filter status=created --filter status=dead |
+    xargs -r docker inspect --format '{{.Id}} {{.State.FinishedAt}} {{.Created}} {{.Name}}')
+
+if [ -n "$dry_run" ]; then
+    echo "dry run: would remove ${#stale[@]} containers, then prune images/volumes/build cache"
+    exit 0
+fi
+
+[ ${#stale[@]} -gt 0 ] && docker rm -v "${stale[@]}" >/dev/null
+
+# Unused images (no container references them) older than the cutoff.
+docker image prune -af --filter "until=$until"
+# Volumes have no age filter, but any volume still attached to a container
+# (even a stopped one younger than the cutoff) is kept, so this only drops
+# volumes orphaned by the container step above or by `docker compose down`.
+docker volume prune -af
+# Build cache `until` is measured from last use, not creation.
+docker builder prune -af --filter "until=$until"
+
+docker system df
