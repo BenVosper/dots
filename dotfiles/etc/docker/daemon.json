@@ -1,3 +1,9 @@
 {
-    "data-root": "/home/docker"
+    "data-root": "/home/docker",
+    "builder": {
+        "gc": {
+            "enabled": true,
+            "defaultMaxUsedSpace": "100GB"
+        }
+    }
 }
